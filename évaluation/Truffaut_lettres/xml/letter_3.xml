@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader>
+      <fileDesc>
+         <titleStmt>
+            <title xml:lang="en">Letter from Alfred Hitchcock to François Truffaut</title>
+            <author>
+               <persName ref="#Hit_002" xml:lang="en">Alfred Hitchcock</persName>
+            </author>
+            <respStmt xml:lang="en">
+               <resp>encoded by</resp>
+               <name>Clotilde Long</name>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <distributor xml:lang="fr" ref="#Bnf_001">Bibliothèque nationale de France</distributor>
+            <availability status="free">
+               <licence target="https://gallica.bnf.fr/ark:/12148/bpt6k1002883t"> </licence>
+            </availability>
+            <idno type="ISBN">2-253-06489-0 (br.)</idno>
+            <idno type="ark">ark:/12148/cb366686978</idno>
+            <!-- notice identifier -->
+            <idno type="BNF">FRBNF36668697</idno>
+            <!-- notice number -->
+         </publicationStmt>
+         <sourceDesc>
+            <!-- This text is encoded from a printed version of the work. -->
+            <biblStruct xml:lang="fr">
+               <monogr>
+                  <editor>Librairie générale française</editor>
+                  <title ref="#Truf_001">Correspondance / François Truffaut ; lettres recueillies par Gilles Jacob et Claude de Givray ; notes de Gilles Jacob ; avant-propos de Jean-Luc Godard</title>
+                  <respStmt>
+                     <resp>éditeur scientifique</resp>
+                     <persName ref="#Jac_003">Gilles Jacob</persName>
+                  </respStmt>
+                  <respStmt>
+                     <resp>éditeur scientifique</resp>
+                     <persName ref="#Giv_004">Claude de Givray</persName>
+                  </respStmt>
+                  <imprint>
+                     <pubPlace>Paris</pubPlace>
+                     <publisher xml:lang="fr" ref="#Bnf_001">Bibliothèque nationale de France</publisher>
+                     <date>1993</date>
+                     <!-- edition date-->
+                  </imprint>
+                  </monogr>
+               </biblStruct>
+            <listPerson>
+               <person xml:id="Truf_001">
+                  <persName xml:lang="fr">François Truffaut</persName>
+                  <idno type="wikidata">Q53002</idno>
+                  <note>François Truffaut : french film director (1932–1984)</note>
+               </person>
+               <person xml:id="Hit_002">
+                  <persName xml:lang="en">Alfred Hitchcock</persName>
+                  <idno type="wikidata">Q7374</idno>
+                  <note>Alfred Hitchcock : British filmmaker (1899-1980)</note>
+               </person>
+               <person xml:id="Jac_003">
+                  <persName xml:lang="fr">Gilles Jacob</persName>
+                  <idno type="wikidata">Q3106313</idno>
+                  <note>Gilles Jacob : French essayist, film critic and film director (1930-)</note>
+               </person>
+               <person xml:id="Giv_004">
+                  <persName xml:lang="fr">Claude de Givray</persName>
+                  <idno type="wikidata">Q615768</idno>
+                  <note>Claude de Givray : French film director (1933-)</note>
+               </person>
+            </listPerson>
+            <listOrg>
+               <org xml:id="Bnf_001">
+                  <orgName>Bibliothèque nationale de France</orgName>
+                  <idno type="wikidata">Q193563</idno>
+                  <note>national library of France in<placeName ref="#Par_001">Paris</placeName></note>
+               </org>
+            </listOrg>
+            <msDesc>
+               <msIdentifier>
+                  <country>France</country>
+                  <settlement ref="#Par_001">Paris</settlement>
+                  <repository xml:lang="fr" ref="#Bnf_001">Bibliothèque nationale de France, département Littérature et art, </repository>
+                  <collection xml:lang="fr">département Littérature et art
+                     <ref type="department" corresp="http://www.cineressources.net/repertoires/archives/fonds.php?id=TRUFFAUT#TRUFFAUT437-B213"> </ref>
+                  </collection>
+                  <idno>16-Z-10387 (9718)</idno>
+                  </msIdentifier>
+               <msContents xml:lang="en">
+                  <summary>This letter is written by Alfred Hitchcock and addressed to François Truffaut. 
+                     Hitchcock asks Truffaut for advice on finding ideas for films and expresses his difficulty in coming up with them.</summary>
+                  <msItem n="1">
+                     <locus from="p.518" to="p.519">page 518-519</locus>
+                     <author ref="#Hit_002">Alfred Hitchcock</author>
+                     <title>Letter from Alfred Hitchcock to François Truffaut</title>
+                  </msItem>
+               </msContents>
+               <physDesc xml:lang="en">
+                  <objectDesc>
+                     <supportDesc material='paper'>
+                        <extent>1 page</extent>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout columns="1">Written in one column</layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc hands="1">
+                     <handNote xml:id="typed">Machine typed text</handNote>
+                  </handDesc>      
+               </physDesc>
+               <history>
+                  <origin>This letter was written by <persName ref="#Hit_002">Alfred Hitchcock</persName> in  
+                     <origDate when="1976-10-20"></origDate> 
+                  </origin>
+               </history>
+               <additional xml:lang="fr">
+                  <adminInfo>
+                     <availability status="restricted">
+                        <p>Conditions spécifiques d'utilisation - Projet de numérisation des indisponibles</p>
+                     </availability>
+                  </adminInfo>   
+               </additional>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc xml:lang="en">
+         <projectDesc>
+            <ab>This encoding project is part of the XML-markup languages course at the École nationale des chartes.</ab>
+         </projectDesc>
+         <samplingDecl>
+            <p>Transcription of one letter between 1000 and 3000 characters from an archive collection</p>
+         </samplingDecl>
+      </encodingDesc>
+      <profileDesc>
+         <creation>
+            <date>1976</date>
+            <!-- date of writting unknown -->
+         </creation>
+         <langUsage>
+            <language ident="fr">French</language>
+         </langUsage>
+         <textDesc>
+            <channel mode="w"/>
+            <constitution type="single"/>
+            <derivation type="original"/>
+            <domain type="personal"/>
+            <factuality type="fact"/>
+            <interaction type="partial"/>
+            <preparedness type="formulaic"/>
+            <purpose type="communication"/>
+         </textDesc>
+         <correspDesc xml:id="message1">
+            <correspAction type="sent">
+               <persName type="author" ref="#Hit_002">Alfred Hitchcock</persName>
+               <persName type="recipient" ref="#Truf_001">François Truffaut</persName>
+               <date when="1976-10-20" xml:lang="fr">20 octobre 1976</date>
+            </correspAction>
+         </correspDesc>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2025-12-25">addition of metadata</change>
+         <change when="2025-12-26">encoding of the body text</change>
+         <change when="2025-12-27">final corrections</change>
+      </revisionDesc>           
+   </teiHeader>
+   
+   <text xml:lang="fr">
+      <body>
+         <div type= "letter" hand="typed">
+            <fw type="letterhead" place="top-center">
+               <persName role="author" ref="#Hit_002">Alfred Hitchcock</persName>à<persName role="recipient" ref="#Truf_001">François Truffaut</persName>
+            </fw>
+            <opener>
+               <dateline>
+                  (traduction de la lettre du <date when="1976-10-20">20 octobre 1976</date>)
+               </dateline>
+               <salute>Cher <persName role="recipient" ref="#Truf_001">François,</persName></salute>
+            </opener>
+            <p>Merci beaucoup pour votre lettre manuscrite.
+               <lb/>Vous m’y parlez de votre prochain film. Ce que j’aimerais savoir, c’est comment vous
+               <lb/>trouvez les sujets de vos films ! Pour le moment, c’est en vain que j’essaie d’en trouver un.
+               <lb/>Vous êtes maintenant, comme vous vous en rendez compte, un homme libre de faire tout ce
+               <lb/>qu’il veut. Quant à moi, je ne peux pas faire ce qu’on attend de moi, c’est-à-dire un thriller ou une
+               <lb/>histoire à suspense, et cela me donne du mal.
+               <lb/>Il y a tant d’histoires qui paraissent ne traiter que de néo-nazis, de Palestiniens en lutte avec des
+               <lb/>Israéliens, etc.
+               <lb/>Et, comme vous le voyez, aucun de ces sujets ne présente de conflit qui possède une dimension
+               <lb/>humaine.
+               <lb/>Comment peut-on avoir un Arabe de comédie ! Cela n’existe pas, pas plus qu’un Israélite amusant.
+               <lb/>Je prends ces deux exemples, car on me les a mis sur mon bureau pour que je les étudie.
+               <lb/>Je me dis parfois que la meilleure oeuvre comique ou dramatique pourrait se jouer ici, dans mon
+               <lb/>bureau avec Peggy, Sue et Alpha. Le seul inconvénient, c’est qu’il faudrait en tuer une, ce que je
+               <lb/>regretterais profondément.
+            </p>
+            <closer>
+               <salute>En tout cas, <persName ref="#Truf_001">François</persName>, bonne chance pour votre prochain film. 
+                  <lb/>Je vous prie de croire en mon meilleur souvenir.
+                  <lb/>Bien affectueusement,</salute>
+               <signed><persName ref="#Hit_002">Hitch</persName></signed>
+            </closer>
+         </div>
+      </body>
+   </text>
+</TEI>

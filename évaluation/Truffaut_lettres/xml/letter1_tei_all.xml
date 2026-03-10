@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="http://www.tei-c.org/release/xml/tei/custom/schema/relaxng/tei_all.rng" type="application/xml" 
+   schematypens="http://relaxng.org/ns/structure/1.0"?>
+
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+
+  <teiHeader xml:lang="en">
+      <fileDesc>
+         <titleStmt>
+            <title>Letter from François Truffaut to Jean Gruault</title>
+            <author>
+               <persName ref="#Truf_001" xml:lang="fr">François Truffaut</persName>
+            </author>
+            <respStmt>
+               <resp>encoded by</resp>
+               <name>Clotilde Long</name>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+              <distributor xml:lang="fr">Bibliothèque François Truffaut</distributor>
+              <availability status="free">
+                 <licence target="https://bibliotheques-specialisees.paris.fr/ark:/73873/pf0001936871"> </licence>
+              </availability>
+            <idno>BFT AJG FT</idno>
+            <!-- identifier of the scanned copy -->
+            <date when="2016-09-22"></date>
+            <!-- date of online publication -->
+         </publicationStmt>
+         <sourceDesc>
+             <biblStruct>
+               <monogr>
+                  <editor xml:lang="fr">Bibliothèque Nationale de France</editor>
+                  <title xml:lang="fr" ref="#Gru_002">Fonds Jean Gruault.: [archives de travail constituées de textes manuscrits, dactylographiés et notes diverses] ; Boite 52 [91]</title>
+                  <imprint>
+                     <pubPlace>Paris</pubPlace>
+                     <publisher xml:lang="fr">Bibliothèque François Truffaut</publisher>
+                     <date>1950-1980</date>
+                     <!-- period extent of Fonds Jean Gruaut-->
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <listPerson>
+               <person xml:id="Truf_001">
+                  <persName xml:lang="fr">François Truffaut</persName>
+                  <idno type="wikidata">11927177t</idno>
+                  <note>François Truffaut : french film director (1932–1984)</note>
+               </person>
+               <person xml:id="Gru_002">
+                  <persName xml:lang="fr">Jean Gruault</persName>
+                  <idno type="wikidata">120401267</idno>
+                  <note>Jean Gruault : French screenwriter (1924-2015)</note>
+               </person>
+               <person xml:id="Roch_003">
+                  <persName xml:lang="fr">Henri-Pierre Roché</persName>
+                  <idno type="wikidata">119222965</idno>
+                  <note>Henri-Pierre Roché: French writer, art collector and art dealer (1879-1959)</note>
+               </person>
+            </listPerson>
+            <listPlace>
+               <place xml:id="Par_001">
+                  <placeName>Paris</placeName>
+                  <location>
+                     <geo>48.866667 2.333333.</geo>
+                     <!-- lat long -->
+                  </location>
+                  <idno type="wikidata">11865278m</idno>
+               </place>
+            </listPlace>
+            <msDesc>
+               <msIdentifier>
+                  <country>France</country>
+                  <settlement ref="#Par_001">Paris</settlement>
+                  <repository xml:lang="fr">Bibliothèque François Truffaut</repository>
+                  <collection xml:lang="fr">Fonds Jean Gruault
+                  <ref type="fonds" corresp="https://ccfr.bnf.fr/portailccfr/ark:/16871/006FRFONDS-751015104-4146"> </ref>
+                  </collection>
+                  <idno>GRUA 52</idno>
+               </msIdentifier>
+               <msContents>
+                  <summary>This letter is written by François Truffaut and addressed to Jean Gruault, his friend and french screenwriter. 
+                     This letter bears witness to the cowriting of the famous film "Jules et Jim". François Truffaut gives reading indications to Jean Gruault, 
+                     for the novel "Jules et Jim" by Jean Pierre Roché, which he plans to adapt for the cinema.</summary>
+                  <msItem n="3">
+                     <locus from="p.5" to="p.5">page 5, letter 3</locus>
+                     <author ref="#Truf_001">François Truffaut</author>
+                     <title>Letter from François Truffaut to Jean Gruaut</title>
+                  </msItem>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc material='paper'>
+                        <extent>1 page</extent>
+                        <condition>The letter has three folds</condition>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout columns="1">Written in one column</layout>
+                     </layoutDesc>
+                  </objectDesc>
+                   <handDesc hands="2">
+                      <handNote xml:id="typed">Machine typed text</handNote>
+                      <handNote xml:id="handwritten">Handwritten annotations and footnotes</handNote>
+                   </handDesc>       
+                  <additions>The letter contain handwritten additions and deletions, in particular a footnote marked with an asterisk</additions>
+               </physDesc>
+               <history>
+                  <origin>This letter was written by <persName ref="#Truf_001">François Truffaut</persName> in 
+                  <origPlace ref="#Par_001">Paris</origPlace> in 
+                  <origDate when="1963-02-27"></origDate> 
+                  </origin>
+               </history>
+               <additional>
+                  <adminInfo>
+                     <availability status="free">
+                        <p>In the public domain</p>
+                     </availability>
+                  </adminInfo>   
+               </additional>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <ab>This encoding project is part of the XML-markup languages course at the École nationale des chartes.</ab>
+         </projectDesc>
+         <samplingDecl>
+            <p>Transcription of one letter between 1000 and 3000 caracters from an archive collection</p>
+         </samplingDecl>
+      </encodingDesc>
+     <profileDesc>
+        <creation>
+           <date>1963</date>
+           <!-- date of writting unknown -->
+        </creation>
+        <langUsage>
+           <language ident="fr">French</language>
+        </langUsage>
+        <textDesc>
+           <channel mode="w"/>
+           <constitution type="single"/>
+           <derivation type="original"/>
+           <domain type="personnal"/>
+           <factuality type="fact"/>
+           <interaction type="partial"/>
+           <preparedness type="formulaic"/>
+           <purpose type="communication"/>
+        </textDesc>
+        <correspDesc xml:id="message1">
+           <correspAction type="sent">
+              <persName type="author" ref="#Truf_001">François Truffaut </persName>
+              <persName type="recipient" ref="#Gru_002">Jean Gruault</persName>
+              <placeName ref="#Par_001">Paris</placeName>
+              <date when="1968-02-27" xml:lang="fr">le 27 février 1968</date>
+           </correspAction>
+        </correspDesc>
+     </profileDesc>
+     <revisionDesc>
+        <change when="2025-11-05">addition of metadata</change>
+        <change when="2025-11-08">encoding of the body text</change>
+        <change when="2025-11-10">encoding of the footnote call in the body of the text</change>
+        <change when="2025-11-12">corrections and additions to metadata</change>
+        <change when="2025-11-14">addition of a list of persons and places</change>
+        <change when="2025-11-15">final corrections</change>
+     </revisionDesc>           
+  </teiHeader>
+  
+  <text xml:lang="fr">
+     <body>
+      <div type= "letter">
+        <opener hand="#typed">
+            <dateline>
+               <placeName ref="#Par_001">Paris</placeName>
+               <date when="1968-02-27">le 27 février 1968</date>
+            </dateline>
+           <persName role="author" ref="#Truf_001">François Truffaut</persName>
+           <salute>Mon cher <persName role="recipient" ref="#Gru_002">Jean,</persName></salute>
+        </opener>
+         <p hand="#typed">Lucette va te remettre les Carnets <persName ref="#Roch_003">d'Henri-
+            <lb/>Pierre Roché.</persName> J'espère qu'ils te passioneront autant que 
+            <lb/>moi. Je te demande pourtant de garder le secret absolu sur 
+            <lb/>cette lecture qui doit rester absolument confidentielle.
+         </p>
+         <p hand="#typed">Je t'indique par commodité que Muriel est 
+            <lb/>généralement désignée sous le nom de "Nuk" tandis que 
+            <lb/>Anne apparait sous le nom de "Mauve". 
+            <add hand="#handwritten" place="inline">
+               <ref target="#n1">(*)</ref></add>ss
+         </p>
+         <p hand="#typed">Cependant si tu lis attentivement, tu te 
+            <lb/>rendras compte que parfois les surnoms se transforment
+            <add hand="#handwritten" place="inline">parfois</add>
+            <lb/>en cours d'aventure.
+         </p>
+         <p hand="#typed">Sur l'exemplaire que Lucette va te donner 
+            <lb/>tu peux cocher au crayon tout ce qui te paraît interessant 
+            <lb/>ou ce dont tu voudrais que nous reparlions ensemble. Je 
+            <lb/>serais à ta disposition quelques jours debut Avril pour en 
+            <lb/>discuter.
+         </p>
+         
+        <closer hand="#typed">
+            <salute>Amitiés,</salute>
+            <signed hand="#handwritten">
+               <del rend="overstriked" type="illegible"/>
+               <gap reason="signatureContent"/>
+            </signed>
+        </closer>
+              <note hand="#handwritten"><add xml:id="n1" type="hand" place="bottom">(*) la 
+                    <hi rend="underlined">rencontre</hi>entre <persName ref="#Roch_003">A.P. Roché</persName> et les 2 soeurs est
+                    <lb/>ultérieure à la rédact. quotidienne du journal; mais
+                    <lb/>on retrouve la suite, l'aventure avec Mauve qui épouse Mouf et
+                    <lb/>Nuck qui vient plusieurs fois à <placeName ref="#Par_001">Paris</placeName>...
+                    </add>
+              </note>
+      </div>
+     </body>
+  </text>
+</TEI>

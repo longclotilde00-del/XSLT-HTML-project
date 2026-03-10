@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-model href="out/myODD2.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="out/myODD2.rng" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<TEI xmlns="http://www.tei-c.org/ns/1.0">
+   <teiHeader xml:lang="en">
+      <fileDesc>
+         <titleStmt>
+            <title>Letter from François Truffaut to Georges Delerue</title>
+            <author>
+               <persName ref="#Truf_001" xml:lang="fr">François Truffaut</persName>
+            </author>
+            <respStmt>
+               <resp>encoded by</resp>
+               <name>Clotilde Long</name>
+            </respStmt>
+         </titleStmt>
+         <publicationStmt>
+            <distributor xml:lang="fr" ref="#Cin_001">Cinémathèque française</distributor>
+            <availability status="free">
+               <licence target="https://www.cinematheque.fr/expositions-virtuelles/truffaut-par-truffaut/index.php?id=14"> </licence>
+            </availability>
+            <idno>TRUFFAUT495-B260</idno>
+            <!-- repository identifier  "correspondance A-K" -->
+         </publicationStmt>
+         <sourceDesc>
+            <biblStruct>
+               <monogr>
+                  <editor xml:lang="fr" ref="#Cin_001">Cinémathèque française</editor>
+                  <title xml:lang="fr" ref="#Truf_001">Fonds François Truffaut: CORRESPONDANCE : 1978 A-K</title>
+                  <imprint>
+                     <pubPlace>Paris</pubPlace>
+                     <publisher xml:lang="fr" ref="#Cin_001">Cinémathèque française</publisher>
+                     <date>1793-1998</date>
+                     <!-- period extent of Fonds François Truffaut-->
+                  </imprint>
+               </monogr>
+            </biblStruct>
+            <listPerson>
+               <person xml:id="Truf_001">
+                  <persName xml:lang="fr">François Truffaut</persName>
+                  <idno type="wikidata">Q53002</idno>
+                  <note>François Truffaut : french film director (1932–1984)</note>
+               </person>
+               <person xml:id="Del_002">
+                  <persName xml:lang="fr">Georges Delerue</persName>
+                  <idno type="wikidata">Q435034</idno>
+                  <note>Georges Delerue : French composer (1925-1992)</note>
+               </person>
+               <person xml:id="Souch_003">
+                  <persName xml:lang="fr">Alain Souchon</persName>
+                  <idno type="wikidata">Q53453</idno>
+                  <note>Alain Souchon: French recording artist, singer, songwriter and actor (1944-)</note>
+               </person>
+               <person xml:id="Tren_004">
+                  <persName xml:lang="fr">Charles Trenet</persName>
+                  <idno type="wikidata">Q212549</idno>
+                  <note>Charles Trenet: French singer-songwriter (1913-2001)</note>
+               </person>
+               <person xml:id="Léaud_005">
+                  <persName xml:lang="fr">Jean-Pierre Léaud</persName>
+                  <idno type="wikidata">Q295834</idno>
+                  <note>Jean-Pierre Léaud: French actor (1944-)</note>
+               </person>
+               <person xml:id="Pis_006">
+                  <persName xml:lang="fr">Marie-France Pisier</persName>
+                  <idno type="wikidata">Q239893</idno>
+                  <note>Marie-France Pisier: French actress (1944-2011)</note>
+               </person>
+               <person xml:id="Jad_007">
+                  <persName xml:lang="fr">Claude Jade</persName>
+                  <idno type="wikidata">Q183471</idno>
+                  <note>Claude Jade: French actress (1948-2006)</note>
+               </person>
+               <person xml:id="Dani_008">
+                  <persName xml:lang="fr">Dani</persName>
+                  <idno type="wikidata">Q548211</idno>
+                  <note>Dani: French actress and singer(1944-2022)</note>
+               </person>
+               <person xml:id="Doro_009">
+                  <persName xml:lang="fr">Dorothée</persName>
+                  <idno type="wikidata">Q448910</idno>
+                  <note>Dorothée: French singer and TV presenter(1953-)</note>
+               </person>
+            </listPerson>
+            <listPerson type="fictional">
+            <person xml:id="Doin_001">
+               <persName xml:lang="fr">Antoine Doinel</persName>
+               <idno type="wikidata">Q21562043</idno>
+               <note>Antoine Doinel: film character in Truffaut's films : 
+                  <title>Les Quatre Cents Coups</title>, 
+                  <title>L'Amour à vingt ans</title>, 
+                  <title>Antoine et Colette</title>, 
+                  <title>Baisers volés</title>, 
+                  <title>Domicile conjugal</title>, 
+                  <title>L'amour en fuite</title></note>
+            </person>
+            </listPerson>
+            <listPlace>
+               <place xml:id="Par_001">
+                  <placeName>Paris</placeName>
+                  <location>
+                     <geo>48.866667 2.333333.</geo>
+                     <!-- lat long -->
+                  </location>
+                  <idno type="wikidata">Q90</idno>
+               </place>
+            </listPlace>
+            <listOrg>
+               <org xml:id="Cin_001">
+                  <orgName>Cinémathèque française</orgName>
+                  <idno>Q174274</idno>
+                  <note>film museum and cinematheque in <placeName ref="#Par_001">Paris</placeName>, France</note>
+               </org>
+               <org xml:id="Ant_002">
+                  <orgName>Antenne 2</orgName>
+                  <idno>Q2852682</idno>
+                  <note>French television channel</note>
+               </org>
+            </listOrg>
+            <listBibl>
+               <bibl xml:id="Nuit_001">
+                  <title>La Nuit Américaine</title>
+                  <author ref="#Truf_001">François Truffaut</author>
+                  <date>1973</date>
+                  <idno type="wikidata">Q909816</idno>
+                  <note type="genre">film</note>
+               </bibl>
+               <bibl xml:id="Quatre_002">
+                  <title>Les Quatre Cents coups</title>
+                  <author ref="#Truf_001">François Truffaut</author>
+                  <date>1959</date>
+                  <idno type="wikidata">Q162331</idno>
+                  <note type="genre">film</note>
+               </bibl>
+               <bibl xml:id="Amour_003">
+                  <title>l'Amour à vingt ans</title>
+                  <author ref="#Truf_001">François Truffaut</author>
+                  <date>1962</date>
+                  <idno type="wikidata">Q568518</idno>
+                  <note type="genre">film</note>
+               </bibl>
+               <bibl xml:id="Bais_004">
+                  <title>Baisers volés</title>
+                  <author ref="#Truf_001">François Truffaut</author>
+                  <date>1968</date>
+                  <idno type="wikidata">Q324933</idno>
+                  <note type="genre">film</note>
+               </bibl>
+               <bibl xml:id="Domi_005">
+                  <title>Domicile conjugal</title>
+                  <author ref="#Truf_001">François Truffaut</author>
+                  <date>1970</date>
+                  <idno type="wikidata">Q627975</idno>
+                  <note type="genre">film</note>
+               </bibl>
+               <bibl xml:id="Amour_006">
+                  <title>l'Amour en fuite</title>
+                  <author ref="#Truf_001">François Truffaut</author>
+                  <date>1978</date>
+                  <idno type="wikidata">Q277281</idno>
+                  <note type="genre">film</note>
+               </bibl>
+               <bibl xml:id="Amour_007">
+                  <title>l'Amour en fuite</title>
+                  <author ref="#Souch_003">Alain Souchon</author>
+                  <date>1979</date>
+                  <idno type="wikidata">Q55590628</idno>
+                  <note type="genre">song</note>
+               </bibl>
+               <bibl xml:id="Que_008">
+                  <title>Que reste-t-il de nos amours?</title>
+                  <author ref="#Tren_004">Charles Trenet</author>
+                  <date>1942</date>
+                  <idno type="wikidata">Q1283107</idno>
+                  <note type="genre">song</note>
+               </bibl>
+            </listBibl>
+            <msDesc>
+               <msIdentifier>
+                  <country>France</country>
+                  <settlement ref="#Par_001">Paris</settlement>
+                  <repository xml:lang="fr" ref="#Cin_001">Cinémathèque française</repository>
+                  <collection xml:lang="fr">Fonds François Truffaut
+                     <ref type="fonds" corresp="http://www.cineressources.net/repertoires/archives/fonds.php?id=TRUFFAUT#TRUFFAUT437-B213"> </ref>
+                  </collection>
+                  <idno>437-B213</idno>
+                  <altIdentifier type="series">
+                     <idno>TRUFFAUT495-B260</idno>
+                     <note> CORRESPONDANCE : 1978 A-K [459 f.] ms, dactyl., multigr.</note>
+                  </altIdentifier>
+               </msIdentifier>
+               <msContents>
+                  <summary>This letter is written by François Truffaut and addressed to Georges Delerue, his friend and french composer. 
+                     This letter shows that François Truffaut asked Georges Delerue to work with him on the music for his new movie, "l'Amour en fuite".
+                     Truffaut gives a brief description of the film and its characters.</summary>
+               </msContents>
+               <physDesc>
+                  <objectDesc>
+                     <supportDesc material='paper'>
+                        <extent>1 page</extent>
+                        <condition>The letter has one fold on the right corner</condition>
+                     </supportDesc>
+                     <layoutDesc>
+                        <layout columns="1">Written in one column</layout>
+                     </layoutDesc>
+                  </objectDesc>
+                  <handDesc hands="2">
+                     <handNote xml:id="typed">Machine typed text</handNote>
+                     <handNote xml:id="handwritten">Handwritten name on the top and underlining</handNote>
+                  </handDesc>       
+                  <additions>The letter contain handwritten name and underlining in two different color : red and black.</additions>
+               </physDesc>
+               <history>
+                  <origin>This letter was written by <persName ref="#Truf_001">François Truffaut</persName> in 
+                     <origPlace ref="#Par_001">Paris</origPlace> in 
+                     <origDate when="1978-06-23"></origDate> 
+                  </origin>
+               </history>
+               <additional>
+                  <adminInfo>
+                     <availability status="free">
+                        <p>In the public domain</p>
+                     </availability>
+                  </adminInfo>   
+               </additional>
+            </msDesc>
+         </sourceDesc>
+      </fileDesc>
+      <encodingDesc>
+         <projectDesc>
+            <ab>This encoding project is part of the XML-markup languages course at the École nationale des chartes.</ab>
+         </projectDesc>
+         <samplingDecl>
+            <p>Transcription of one letter between 1000 and 3000 caracters from an archive collection</p>
+         </samplingDecl>
+      </encodingDesc>
+      <profileDesc>
+         <creation>
+            <date>1978</date>
+            <!-- date of writting unknown -->
+         </creation>
+         <langUsage>
+            <language ident="fr">French</language>
+         </langUsage>
+         <textDesc>
+            <channel mode="w"/>
+            <constitution type="single"/>
+            <derivation type="original"/>
+            <domain type="personal"/>
+            <factuality type="fact"/>
+            <interaction type="partial"/>
+            <preparedness type="formulaic"/>
+            <purpose type="communication"/>
+         </textDesc>
+         <correspDesc xml:id="message1">
+            <correspAction type="sent">
+               <persName type="author" ref="#Truf_001">François Truffaut </persName>
+               <persName type="recipient" ref="#Del_002">Georges Delerue</persName>
+               <placeName ref="#Par_001">Paris</placeName>
+               <date when="1978-06-23" xml:lang="fr">le 23 juin 1978</date>
+            </correspAction>
+         </correspDesc>
+      </profileDesc>
+      <revisionDesc>
+         <change when="2025-12-24">addition of metadata</change>
+         <change when="2025-12-25">encoding of the body text</change>
+         <change when="2025-12-29">final corrections</change>
+      </revisionDesc>           
+   </teiHeader>
+   
+   <text xml:lang="fr">
+      <body>
+         <div type= "letter">
+            <fw type="letterhead" place="top-left" hand="#handwritten">
+               <persName role="recipient" ref="#Del_002">Georges DELERUE</persName>
+            </fw>
+            <opener hand="#typed">
+               <dateline>
+                  <placeName ref="#Par_001">Paris,</placeName>
+                  <date when="1978-06-23">le 23 juin 1978</date>
+               </dateline>
+               <salute>Mon cher <persName role="recipient" ref="#Del_002">Georges,</persName></salute>
+            </opener>
+            <p hand="#typed">Je serais heureux de renouer notre collaboration à la faveur du film que je tourne
+               <lb/>actuellement et qui s’intitule : <hi rend="underline" style="color: black,red;"><bibl ref="#Amour_006">“l’Amour en fuite”.</bibl></hi> 
+            </p>
+            <p hand="#typed">Il s’agit des nouvelles aventures d’<persName ref="#Doin_001">Antoine Doinel</persName>, probablement le dernier film de la série.
+               <lb/><persName ref="#Léaud_005">Jean-Pierre Léaud</persName> y retrouve certaines de ses partenaires : <persName ref="#Pis_006">Marie-France Pisier</persName>, <persName ref="#Jad_007">Claude Jade</persName> et
+               <lb/>même la <persName ref="#Dani_008">Dani</persName> de <hi rend="underline" style="color: black;"><bibl ref="#Nuit_001">“La Nuit Américaine”.</bibl></hi> Ainsi qu’une nouvelle jeune femme, <persName ref="#Doro_009">Dorothée</persName> (la plus 
+               <lb/>jeune speakerine d’<orgName ref="#Ant_002">Antenne 2</orgName>). Nous aurons la chance d’introduire dans le film des flashes-back
+               <lb/>très authentiques puisqu’ils proviennent des <hi rend="underline" style="color: black;"><bibl ref="#Quatre_002">“Quatre Cents coups”.</bibl></hi> De <hi rend="underline" style="color: black;"><bibl ref="#Amour_003">“l’Amour à vingt ans”.</bibl></hi> De
+               <lb/><hi rend="underline" style="color: black;"><bibl ref="#Bais_004">“Baisers Volés”</bibl></hi> et de <hi rend="underline" style="color: black;"><bibl ref="#Domi_005">“Domicile Conjugal”</bibl></hi> (et très brièvement de <hi rend="underline" style="color: black;"><bibl ref="#Nuit_001">“La Nuit Américaine”</bibl>).</hi>
+               <lb/>Naturellement nous nous efforcerons de choisir des extraits sans musique ou dont il est possible de
+               <lb/>refaire le mixage.
+            </p>
+            <p hand="#typed">Je ne vous cache pas que c’est une sorte de patchwork et qu’à mon avis, le travail musical 
+               <lb/>sera à la fois difficile et passionnant. 
+            </p>
+            <p hand="#typed"><persName ref="#Souch_003">Alain Souchon</persName> est en train d’écrire une chanson intitulée <bibl ref="#Amour_007">“L’Amour en fuite”</bibl> et il est 
+               <lb/>possible ausi qu’à trois ou quatre reprises, nous entendions, comme dans <hi rend="underline" style="color: black;"><bibl ref="#Bais_004">“Baisers Volés”</bibl>,</hi> quelques 
+               <lb/>bouffées du thème de <persName ref="#Tren_004">Trénet</persName> : <bibl ref="#Que_008">“Que reste-t-il de nos amours?”</bibl>. 
+            </p>
+         </div>
+      </body>
+   </text>
+</TEI>
