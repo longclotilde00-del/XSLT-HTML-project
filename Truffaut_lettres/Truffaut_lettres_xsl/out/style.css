@@ -1,0 +1,339 @@
+
+/* ============================================================
+   CORRESPONDANCES DE FRANÇOIS TRUFFAUT — style.css
+   Inspiré de l'esthétique de la Nouvelle Vague et des archives
+   ============================================================ */
+
+/* --- Google Fonts --- */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Raleway:wght@300;400;500&display=swap');
+
+/* --- Variables globales --- */
+:root {
+    --couleur-fond: #faf6ef;
+    --couleur-texte: #2c2420;
+    --couleur-accent: #c0392b;
+    --couleur-secondaire: #1a1a2e;
+    --couleur-lien: #8b3a2a;
+    --couleur-personne: #8B4513;
+    --couleur-lieu: #2F4F4F;
+    --couleur-oeuvre: #4B0082;
+    --couleur-org: #006400;
+    --couleur-note: #f5f0e8;
+    --couleur-bordure: #d4c9b0;
+    --police-titre: 'Cormorant Garamond', Georgia, serif;
+    --police-corps: 'Raleway', sans-serif;
+}
+
+/* ============================================================
+   RESET ET BASE
+   ============================================================ */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--couleur-fond);
+    color: var(--couleur-texte);
+    font-family: var(--police-corps);
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.8;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* ============================================================
+   BANNIÈRE
+   ============================================================ */
+
+.banniere {
+    background-color: #2c1f14 !important;
+    background-image: 
+        radial-gradient(ellipse at 20% 50%, rgba(192, 57, 43, 0.15) 0%, transparent 60%),
+        radial-gradient(ellipse at 80% 50%, rgba(139, 58, 42, 0.1) 0%, transparent 60%);
+    color: #f0ece8;
+    padding: 3rem 2rem 2rem !important;
+    text-align: center;
+    position: relative;
+    border-bottom: none !important;
+}
+
+
+/* Suppression de la ligne du haut */
+.banniere::before {
+    display: none;
+}
+
+/* Titre dans la bannière */
+.banniere h1 {
+    font-family: var(--police-titre) !important;
+    font-size: 2.4rem !important;
+    font-weight: 300 !important;
+    letter-spacing: 0.12em !important;
+    color: #f5efe6 !important;
+    text-transform: uppercase;
+    border-bottom: none !important;
+    margin-bottom: 0.6rem !important;
+}
+
+/* Sous-titre dans la bannière */
+.banniere p {
+    font-size: 0.85rem !important;
+    color: #c4a882 !important;
+    font-style: italic;
+    letter-spacing: 0.06em;
+    margin: 0 !important;
+    border-bottom: none !important;
+}
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+.navbar-nav.flex-row {
+    flex-direction: row !important;
+    align-items: center !important;
+}
+
+.navbar-nav.flex-row li {
+    display: inline-flex !important;
+    align-items: center !important;
+    margin-bottom: 0 !important;
+}
+
+.navbar-nav.flex-row .nav-link {
+    padding: 0 !important;
+}
+
+   .btn-outline-secondary {
+    border-color: #2c1f14 !important;
+    background-color: #2c1f14 !important;
+    color: #f5efe6 !important;
+    font-family: var(--police-titre) !important;
+    font-size: 0.85rem !important;
+    font-weight: 300 !important;
+    letter-spacing: 0.12em !important;
+    text-transform: uppercase !important;
+    padding: 0.3rem 0.9rem !important;
+    border-radius: 0 !important;
+    transition: all 0.2s ease !important;
+    font-style: italic;
+}
+
+.btn-outline-secondary:hover {
+    background-color: var(--couleur-accent) !important;
+    border-color: var(--couleur-accent) !important;
+    color: #fff !important;
+    font-style: normal;
+}
+
+/* ============================================================
+   TYPOGRAPHIE
+   ============================================================ */
+
+h1, h2, h3 {
+    font-family: var(--police-titre) !important;
+    font-weight: 400 !important;
+}
+
+h1 {
+    font-size: 1.8rem !important;
+    letter-spacing: 0.02em;
+    margin: 1.5rem 0 1rem !important;
+    text-align: center;
+    padding-bottom: 0.8rem;
+    border-bottom: 1px solid var(--couleur-bordure);
+}
+
+h2 {
+    font-size: 1.35rem !important;
+    color: var(--couleur-accent);
+    margin-top: 2rem !important;
+    margin-bottom: 0.8rem !important;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--couleur-bordure);
+}
+
+h3 {
+    font-size: 1.1rem !important;
+    margin-top: 1.2rem !important;
+}
+
+/* ============================================================
+   LIENS
+   ============================================================ */
+
+a {
+    color: var(--couleur-lien);
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--couleur-accent);
+    text-decoration: underline;
+}
+
+/* ============================================================
+   LISTES
+   ============================================================ */
+
+ul li {
+    margin-bottom: 0.4rem;
+    font-size: 0.93rem;
+    font-weight: 300;
+}
+
+/* ============================================================
+   CORPS DE LA LETTRE
+   ============================================================ */
+
+/* Encadré papier blanc autour du texte */
+body > div > div > p,
+.corps-lettre-wrapper {
+    background: #fff;
+    border: 1px solid var(--couleur-bordure);
+    padding: 2.5rem 3rem;
+    position: relative;
+    font-family: var(--police-titre);
+    font-size: 1.05rem;
+    line-height: 2;
+}
+
+/* Éléments encodés */
+a[style*="color: #8B4513"] {
+    color: var(--couleur-personne) !important;
+    border-bottom: 1px dotted var(--couleur-personne);
+    text-decoration: none !important;
+    transition: background 0.15s;
+}
+
+a[style*="color: #8B4513"]:hover {
+    background-color: #fdf0e0;
+}
+
+a[style*="color: #2F4F4F"] {
+    color: var(--couleur-lieu) !important;
+    font-style: italic;
+    text-decoration: none !important;
+}
+
+em[style*="color: #4B0082"] {
+    color: var(--couleur-oeuvre) !important;
+}
+
+a[style*="color: #006400"] {
+    color: var(--couleur-org) !important;
+    text-decoration: none !important;
+}
+
+span[style*="color: #8B0000"] {
+    color: var(--couleur-accent) !important;
+    background-color: rgba(192, 57, 43, 0.05);
+    padding: 0 2px;
+    border-radius: 2px;
+}
+
+/* Note de bas de page */
+div[style*="border-top: 1px solid gray"] {
+    background: var(--couleur-note) !important;
+    border-top: 2px solid var(--couleur-bordure) !important;
+    border-left: 3px solid var(--couleur-accent) !important;
+    padding: 1rem 1.2rem !important;
+    font-size: 0.9rem !important;
+    color: #666 !important;
+    margin-top: 2rem !important;
+}
+
+/* ============================================================
+   MÉTADONNÉES
+   ============================================================ */
+
+ul li strong {
+    color: var(--couleur-accent);
+    font-weight: 500;
+}
+
+/* ============================================================
+   INDEX — items
+   ============================================================ */
+
+ul li a[href="lettre1.html"],
+ul li a[href="lettre2.html"],
+ul li a[href="lettre3.html"] {
+    display: inline-block;
+    font-size: 0.75rem;
+    background: var(--couleur-accent);
+    color: #fff !important;
+    padding: 0.1em 0.5em;
+    border-radius: 3px;
+    margin-left: 0.4em;
+    font-family: var(--police-corps);
+    font-weight: 400;
+    letter-spacing: 0.04em;
+    text-decoration: none !important;
+    transition: background 0.2s;
+}
+
+ul li a[href="lettre1.html"]:hover,
+ul li a[href="lettre2.html"]:hover,
+ul li a[href="lettre3.html"]:hover {
+    background: var(--couleur-lien);
+}
+
+/* ============================================================
+   FAC-SIMILÉ
+   ============================================================ */
+
+img[alt*="Lettre"] {
+    border: 1px solid var(--couleur-bordure);
+    box-shadow: 4px 4px 16px rgba(0,0,0,0.1);
+    max-width: 100%;
+    display: block;
+    margin: 1rem auto;
+}
+
+embed {
+    border: 1px solid var(--couleur-bordure);
+}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+
+footer {
+    background-color: var(--couleur-secondaire) !important;
+    color: #9b8fa0 !important;
+    text-align: center;
+    padding: 1.5rem 2rem !important;
+    margin-top: 3rem !important;
+    border-top: 3px solid var(--couleur-accent);
+}
+
+footer hr {
+    border-color: #333 !important;
+    margin-bottom: 0.8rem;
+}
+
+footer p {
+    margin: 0;
+    color: #9b8fa0;
+    font-size: 0.82rem;
+    font-family: var(--police-corps);
+    font-weight: 300;
+    letter-spacing: 0.03em;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 768px) {
+    h1 { font-size: 1.3rem !important; }
+    h2 { font-size: 1.1rem !important; }
+
+    .corps-lettre-wrapper,
+    body > div > div > p {
+        padding: 1.2rem;
+    }
+}

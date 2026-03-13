@@ -14,9 +14,11 @@
         <head>
             <meta charset="utf-8"/>
             <meta name="viewport" content="width=device-width, initial-scale=1"/>
-            <!--chargement du CSS de Bootstrap-->
+            <!--chargement du CSS de Bootstrap pour le placement des éléments du site et leur style individuel-->
             <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"/>
             
+            <!--chargement de ma feuille de style CSS pour le style global du site-->
+            <link rel="stylesheet" href="style.css"/>
             <link rel="preconnect" href="https://fonts.googleapis.com"/>
             <link rel="preconnect" href="https://fonts.gstatic.com" />
             <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
@@ -635,13 +637,13 @@
                                 <xsl:value-of select="$lettre3//layoutDesc/layout"/>
                             </li>
                             <li><strong>Nombre de mains : </strong>
-                                <xsl:value-of select="$lettre2//handDesc/@hands"/>
+                                <xsl:value-of select="$lettre3//handDesc/@hands"/>
                             </li>
                             <li><strong>Type d'écriture : </strong>
-                                <xsl:value-of select="$lettre2//handDesc/handNote"/>
+                                <xsl:value-of select="$lettre3//handDesc/handNote"/>
                             </li>
                             <li><strong>Particularités : </strong>
-                                <xsl:value-of select="$lettre2//additions"/>
+                                <xsl:value-of select="$lettre3//additions"/>
                             </li>
                         </ul>
                         <!-- métadonnées d'encodage-->
