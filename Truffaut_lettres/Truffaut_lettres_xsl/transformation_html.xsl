@@ -47,9 +47,6 @@
                 <h1 class="mb-2">
                     Correspondances de <xsl:value-of select="//titleStmt/author"/>
                 </h1>
-            <p class="mb-0" style="font-size: 0.88rem; color: #9b8fa0; font-style: italic;">
-                Trois lettres issues des fonds Truffaut
-            </p>
         </div>
                 <nav class="navbar py-2">
                     <div class="container-fluid justify-content-center">
@@ -71,16 +68,19 @@
         <xsl:call-template name="index"/>
         <xsl:call-template name="Lettre1"/>
         <xsl:call-template name="Lettre2"/>
-        <xsl:call-template name="Lettre3"/>-->
+        <xsl:call-template name="Lettre3"/>
     </xsl:template>
     
     <!--création d'un template qui apelle la page d'accueil du site-->
     <xsl:template name="home">
+        
         <xsl:result-document href="out/home.html" method="html" indent="yes">
             <html>
                 <xsl:copy-of select="$head"/>
                 <body style="margin: 2em 20em 5em 20em; font-family: 'Roboto', serif;">
-                    <xsl:copy-of select="$header"/>
+                    <div class="container py-4">
+                        <!--ajout d'un conteneur pour créer des marges autour des éléments de la page-->
+                        <xsl:copy-of select="$header"/>
                     <h1 style="text-align: center;">Accueil</h1>
                     
                     <div class="text-center my-4">
@@ -170,6 +170,7 @@
                         </div>
                         
                     </div>
+                    </div>
                     
                 </body>
                 <xsl:copy-of select="$footer"/>
@@ -183,6 +184,8 @@
             <html>
                 <xsl:copy-of select="$head"/>
                 <body class="p-3" style="margin: 2em 20em 5em 20em; font-family: 'Roboto', serif;">
+                    <!--ajout d'un conteneur pour créer des marges autour des éléments de la page-->
+                    <div class="container py-4">
                     <xsl:copy-of select="$header"/>
                     <h1 style="text-align: center;">Index</h1>
                     <div class="container-fluid px-4" style="margin: 2em 0 2em 0;">
@@ -368,6 +371,7 @@
                             </xsl:for-each>
                         </ul>
                     </div>
+                    </div>
                 </body>
                 <xsl:copy-of select="$footer"/>
             </html>
@@ -379,74 +383,92 @@
             <html>
                 <xsl:copy-of select="$head"/>
                 <body style="margin: 2em 20em 5em 20em; font-family: 'Roboto', serif;">
+                    <!--ajout d'un conteneur pour créer des marges autour des éléments de la page-->
+                    <div class="container py-4">
                     <xsl:copy-of select="$header"/>
                     <h1 style="text-align: center;"><xsl:value-of select="$lettre1//titleStmt/title"/></h1>
                     
                     <div style="margin: 2em 0 2em 0;">
                         <p>Cette page propose un encodage d'une lettre issue des archives de François Truffaut accompagnée de ses métadonnées</p>
                     </div>
-                    <div style="margin: 2em 0 2em 0;">
+                    
                         <h2>Métadonnées</h2>
-                        <!--On récupère ici les métadonnées pertinentes avec des xsl:value-of-->
-                        <!--métadonnées générales-->
-                        <ul>
-                            <li>Titre :
-                                <xsl:value-of select="$lettre1//titleStmt/title"/>
-                            </li>
-                            <li>Auteur :
-                                <xsl:value-of select="$lettre1//titleStmt/author/persName"/>
-                            </li>
-                            <li>Destinataire :
-                                <xsl:value-of select="$lettre1//correspAction/persName[@type='recipient']"/>
-                            </li>
-                            <li>Date d'écriture :
-                                <xsl:value-of select="$lettre1//correspAction/date"/>
-                            </li>
-                            <li>Lieu d'écriture : 
-                                <xsl:value-of select="$lettre1//correspAction/placeName"/>
-                            </li>
-                        </ul>
+                    <div class="row g-3 mt-2">
+                        <!--création de trois colonnes de métadonnées réparties sur la largeur de la page-->
+                        <div class="col-md-4">
+                            <div style="background: #fff; border: 1px solid #8b3a2a; padding: 1rem; height: 100%;">
+                                <h3><strong>Identification</strong></h3>
+                                <ul style="list-style: none; padding: 0;">
+                                <!--On récupère ici les métadonnées pertinentes avec des xsl:value-of-->
+                                <!--métadonnées générales-->
+                                    <li><strong>Titre : </strong>
+                                        <xsl:value-of select="$lettre1//titleStmt/title"/>
+                                    </li>
+                                    <li><strong>Auteur : </strong>
+                                        <xsl:value-of select="$lettre1//titleStmt/author/persName"/>
+                                    </li>
+                                    <li><strong>Destinataire : </strong>
+                                        <xsl:value-of select="$lettre1//correspAction/persName[@type='recipient']"/>
+                                    </li>
+                                    <li><strong>Date d'écriture : </strong>
+                                        <xsl:value-of select="$lettre1//correspAction/date"/>
+                                    </li>
+                                    <li><strong>Lieu d'écriture : </strong> 
+                                        <xsl:value-of select="$lettre1//correspAction/placeName"/>
+                                    </li>
+                                </ul>
+                         </div>
+                        </div>
                         <!--métadonnées de conservation-->
-                        <ul>
-                            <li>Conservée à : 
-                                <xsl:value-of select="$lettre1//msIdentifier/repository"/>
-                            </li>
-                            <li>Partie de :
-                                <xsl:value-of select="normalize-space($lettre1//msIdentifier/collection)"/>
-                            </li>
-                            <li>Cote :
-                                <xsl:value-of select="$lettre1//msIdentifier/idno"/>
-                            </li>
-                        </ul>
+                        <div class="col-md-4">
+                            <div style="background: #fff; border: 1px solid #8b3a2a; padding: 1rem; height: 100%;">
+                                <h3><strong>Conservation</strong></h3>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li><strong>Conservée à : </strong>
+                                        <xsl:value-of select="$lettre1//msIdentifier/repository"/>
+                                    </li>
+                                    <li><strong>Partie de : </strong>
+                                        <xsl:value-of select="normalize-space($lettre1//msIdentifier/collection)"/>
+                                    </li>
+                                    <li><strong>Cote : </strong>
+                                        <xsl:value-of select="$lettre1//msIdentifier/idno"/>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                         <!-- métadonnées de description-->
+                        <div class="col-md-4">
+                            <div style="background: #fff; border: 1px solid #8b3a2a; padding: 1rem; height: 100%;">
+                                <h3><strong>Description</strong></h3>
+                                <ul style="list-style: none; padding: 0;">
+                                    <li><strong>Support : </strong>
+                                        <xsl:value-of select="$lettre1//supportDesc/@material"/>
+                                    </li>
+                                    <li><strong>Étendue : </strong> 
+                                        <xsl:value-of select="$lettre1//supportDesc/extent"/>
+                                    </li>
+                                    <li><strong>État : </strong>
+                                        <xsl:value-of select="$lettre1//supportDesc/condition"/>
+                                    </li>
+                                    <li><strong>Mise en page : </strong>
+                                        <xsl:value-of select="$lettre1//layoutDesc/layout"/>
+                                    </li>
+                                    <li><strong>Nombre de mains : </strong>
+                                        <xsl:value-of select="$lettre1//handDesc/@hands"/>
+                                    </li>
+                                    <li><strong>Types de mains : </strong>
+                                        <xsl:value-of select="$lettre1//handDesc/handNote"/>
+                                    </li>
+                                    <li><strong>Particularités : </strong>
+                                        <xsl:value-of select="$lettre1//additions"/>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                         <ul>
-                            <li><strong>Support : </strong>
-                                <xsl:value-of select="$lettre1//supportDesc/@material"/>
-                            </li>
-                            <li>Étendue : 
-                                <xsl:value-of select="$lettre1//supportDesc/extent"/>
-                            </li>
-                            <li><strong>État : </strong>
-                                <xsl:value-of select="$lettre1//supportDesc/condition"/>
-                            </li>
-                            <li><strong>Mise en page : </strong>
-                                <xsl:value-of select="$lettre1//layoutDesc/layout"/>
-                            </li>
-                            <li><strong>Nombre de mains : </strong>
-                                <xsl:value-of select="$lettre1//handDesc/@hands"/>
-                            </li>
-                            <li><strong>Types de mains : </strong>
-                                <xsl:value-of select="$lettre1//handDesc/handNote"/>
-                            </li>
-                            <li><strong>Particularités : </strong>
-                                <xsl:value-of select="$lettre1//additions"/>
-                            </li>
                             <!--Informations d'encodage-->
                             <li><strong>Encodé par : </strong>
                                 <xsl:value-of select="$lettre1//respStmt/name"/>
-                            </li>
-                            <li><strong>Description du projet : </strong>
-                                <xsl:value-of select="$lettre1//projectDesc/ab"/>
                             </li>
                         </ul>
                         <!-- résumé de la lettre-->
@@ -470,6 +492,7 @@
                         width="100%" 
                         height="800px"/>
                 </div>
+                    </div>
                     </div>
                     <xsl:copy-of select="$footer"/>
                 </body>
@@ -498,7 +521,7 @@
         <xsl:choose>
             <!--mise en majuscules pour la lettre 3-->
             <xsl:when test=". = $lettre3//fw">
-                <div style="font-style: italic; text-transform: uppercase; margin-bottom: 1em;">
+                <div style="font-style: italic; text-transform: uppercase; text-align: center; margin-bottom: 1em;">
                     <xsl:apply-templates/>
                 </div>
             </xsl:when>
@@ -591,6 +614,8 @@
             <html>
                 <xsl:copy-of select="$head"/>
                 <body style="margin: 2em 20em 5em 20em; font-family: 'Roboto', serif;">
+                    <!--ajout d'un conteneur pour créer des marges autour des éléments de la page-->
+                    <div class="container py-4">
                     <xsl:copy-of select="$header"/>
                     <h1 style="text-align: center;">Deuxième lettre du corpus : <xsl:value-of select="$lettre2//titleStmt/title"/></h1>
                     
@@ -599,68 +624,83 @@
                     </div>
                     <div style="margin: 2em 0 2em 0;">
                         <h2>Métadonnées</h2>
-                        <!--utilisation de xsl:value-of afin de sélectionner les métadonnées pertinentes à integrer dans notre page html-->
-                        <!-- métadonnées générales -->
-                        <ul>
-                            <li>Titre :
-                                <xsl:value-of select="$lettre2//titleStmt/title"/>
-                            </li>
-                            <li>Auteur :
-                                <xsl:value-of select="$lettre2//titleStmt/author/persName"/>
-                            </li>
-                            <li>Destinataire :
-                                <xsl:value-of select="$lettre2//correspAction/persName[@type='recipient']"/>
-                            </li>
-                            <li>Date d'écriture :
-                                <xsl:value-of select="$lettre2//correspAction/date"/>
-                            </li>
-                            <li>Lieu d'écriture : 
-                                <xsl:value-of select="$lettre2//correspAction/placeName"/>
-                            </li>
-                        </ul>
+                        <div class="row g-3 mt-2">
+                            <!--création de trois colonnes de métadonnées réparties sur la largeur de la page-->
+                            <div class="col-md-4">
+                                <div style="background: #fff; border: 1px solid #8b3a2a; padding: 1rem; height: 100%;">
+                                    <h3><strong>Identification</strong></h3>
+                                    <ul style="list-style: none; padding: 0;">
+                                    <!--utilisation de xsl:value-of afin de sélectionner les métadonnées pertinentes à integrer dans notre page html-->
+                                    <!-- métadonnées générales -->
+                                        <li><strong>Titre : </strong>
+                                            <xsl:value-of select="$lettre2//titleStmt/title"/>
+                                        </li>
+                                        <li><strong>Auteur : </strong>
+                                            <xsl:value-of select="$lettre2//titleStmt/author/persName"/>
+                                        </li>
+                                        <li><strong>Destinataire : </strong>
+                                            <xsl:value-of select="$lettre2//correspAction/persName[@type='recipient']"/>
+                                        </li>
+                                        <li><strong>Date d'écriture : </strong>
+                                            <xsl:value-of select="$lettre2//correspAction/date"/>
+                                        </li>
+                                        <li><strong>Lieu d'écriture : </strong> 
+                                            <xsl:value-of select="$lettre2//correspAction/placeName"/>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         <!-- conservation -->
-                        <ul>
-                            <li>Conservée à : 
-                                <xsl:value-of select="$lettre2//msIdentifier/repository"/>
-                            </li>
-                            <li>Partie de :
-                                <xsl:value-of select="normalize-space($lettre2//msIdentifier/collection)"/>
-                            </li>
-                            <li>Cote :
-                                <xsl:value-of select="$lettre2//msIdentifier/idno"/>
-                            </li>
-                        </ul>
+                             <div class="col-md-4">
+                                  <div style="background: #fff; border: 1px solid #8b3a2a; padding: 1rem; height: 100%;">
+                                       <h3><strong>Conservation</strong></h3>
+                                        <ul style="list-style: none; padding: 0;">
+                                            <li><strong>Conservée à : </strong> 
+                                                <xsl:value-of select="$lettre2//msIdentifier/repository"/>
+                                            </li>
+                                            <li><strong>Partie de : </strong>
+                                                <xsl:value-of select="normalize-space($lettre2//msIdentifier/collection)"/>
+                                            </li>
+                                            <li><strong>Cote : </strong>
+                                                <xsl:value-of select="$lettre2//msIdentifier/idno"/>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
                         <!--métadonnées de description physique-->
-                        <ul>
-                            <li><strong>Support : </strong>
-                                <xsl:value-of select="$lettre2//supportDesc/@material"/>
-                            </li>
-                            <li><strong>Etendue : </strong>
-                                <xsl:value-of select="$lettre2//supportDesc/extent"/>
-                            </li>
-                            <li><strong>État : </strong>
-                                <xsl:value-of select="$lettre2//supportDesc/condition"/>
-                            </li>
-                            <li><strong>Mise en page : </strong>
-                                <xsl:value-of select="$lettre2//layoutDesc/layout"/>
-                            </li>
-                            <li><strong>Nombre de mains : </strong>
-                                <xsl:value-of select="$lettre2//handDesc/@hands"/>
-                            </li>
-                            <li><strong>Type d'écriture : </strong>
-                                <xsl:value-of select="$lettre2//handDesc/handNote"/>
-                            </li>
-                            <li><strong>Particularités : </strong>
-                                <xsl:value-of select="$lettre2//additions"/>
-                            </li>
-                        </ul>
+                                <div class="col-md-4">
+                                     <div style="background: #fff; border: 1px solid #8b3a2a; padding: 1rem; height: 100%;">
+                                            <h3><strong>Description</strong></h3>
+                                            <ul style="list-style: none; padding: 0;">
+                                                <li><strong>Support : </strong>
+                                                    <xsl:value-of select="$lettre2//supportDesc/@material"/>
+                                                </li>
+                                                <li><strong>Etendue : </strong>
+                                                    <xsl:value-of select="$lettre2//supportDesc/extent"/>
+                                                </li>
+                                                <li><strong>État : </strong>
+                                                    <xsl:value-of select="$lettre2//supportDesc/condition"/>
+                                                </li>
+                                                <li><strong>Mise en page : </strong>
+                                                    <xsl:value-of select="$lettre2//layoutDesc/layout"/>
+                                                </li>
+                                                <li><strong>Nombre de mains : </strong>
+                                                    <xsl:value-of select="$lettre2//handDesc/@hands"/>
+                                                </li>
+                                                <li><strong>Type d'écriture : </strong>
+                                                    <xsl:value-of select="$lettre2//handDesc/handNote"/>
+                                                </li>
+                                                <li><strong>Particularités : </strong>
+                                                    <xsl:value-of select="$lettre2//additions"/>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                        </div>
                         <!--métadonnées d'encodage-->
                         <ul>
                             <li><strong>Encodé par : </strong>
                                 <xsl:value-of select="$lettre2//respStmt/name"/>
-                            </li>
-                            <li><strong>Description du projet : </strong>
-                                <xsl:value-of select="$lettre2//projectDesc/ab"/>
                             </li>
                         </ul>
                         <!--Résumé du contenu de la lettre-->
@@ -673,9 +713,6 @@
                     <div class="row mt-4"> <!-- utilisation de bootstrap pour diviser la page en deux et mettre la transcription et l'image de la lettre côte à côteô-->
                         <div class="col-md-6" style="padding-left: 3rem;">
                         <h2>Corps de la lettre</h2>
-                            <div style="font-style: italic; text-transform: margin-bottom: 1em;">
-                                <xsl:value-of select="$lettre2//fw"/>
-                            </div>
                         <!-- utilisation de apply templates pour traiter les balises enfant du corps du texte de la lettre et ainsi garder la mise en forme pour chaque élément -->
                         <div><xsl:apply-templates select="$lettre2//body"/></div>
                     </div>
@@ -686,6 +723,7 @@
                                  alt="Lettre de François Truffaut à Georges Delerue" 
                                  style="width: 100%; max-width: 800px; display: block; margin: auto"/>
                          </div>
+                    </div>
                     </div>
                     <xsl:copy-of select="$footer"/>
                 </body>
@@ -703,7 +741,7 @@
         </a>
     </xsl:template>
     
-    <!--Mise en forme des noms d'orgaisations dans uen couleur différente avec un lien cliquable vers l'index-->
+    <!--Mise en forme des noms d'organisations dans uen couleur différente avec un lien cliquable vers l'index-->
     <xsl:template match="orgName">
         <a href="index.html" style="color: #006400; text-decoration: none;">
             <xsl:apply-templates/>
@@ -716,6 +754,8 @@
             <html>
                 <xsl:copy-of select="$head"/>
                 <body style="margin: 2em 20em 5em 20em; font-family: 'Roboto', serif;">
+                    <!--ajout d'un conteneur pour créer des marges autour des éléments de la page-->
+                    <div class="container py-4">
                     <xsl:copy-of select="$header"/>
                     <h1 style="text-align: center;">Troisième lettre du corpus : <xsl:value-of select="$lettre3//titleStmt/title"/></h1>
                     
@@ -724,64 +764,78 @@
                     </div>
                     <div style="margin: 2em 0 2em 0;">
                         <h2>Métadonnées</h2>
-                        <!-- métadonnées générales -->
-                        <ul>
-                            <li>Titre :
-                                <xsl:value-of select="$lettre3//titleStmt/title"/>
-                            </li>
-                            <li>Auteur :
-                                <xsl:value-of select="$lettre3//titleStmt/author/persName"/>
-                            </li>
-                            <li>Destinataire :
-                                <xsl:value-of select="$lettre3//correspAction/persName[@type='recipient']"/>
-                            </li>
-                            <li>Date d'écriture :
-                                <xsl:value-of select="$lettre3//correspAction/date"/>
-                            </li>
-                            <li>Lieu d'écriture : 
-                                <xsl:value-of select="$lettre3//correspAction/placeName"/>
-                            </li>
-                        </ul>
+                        <div class="row g-3 mt-2">
+                            <!--création de trois colonnes de métadonnées réparties sur la largeur de la page-->
+                            <div class="col-md-4">
+                                <div style="background: #fff; border: 1px solid #8b3a2a; padding: 1rem; height: 100%;">
+                                    <h3><strong>Identification</strong></h3>
+                                    <ul style="list-style: none; padding: 0;">
+                                     <!-- métadonnées générales -->
+                                         <li><strong>Titre : </strong>
+                                             <xsl:value-of select="$lettre3//titleStmt/title"/>
+                                         </li>
+                                         <li><strong>Auteur : </strong>
+                                             <xsl:value-of select="$lettre3//titleStmt/author/persName"/>
+                                         </li>
+                                         <li><strong>Destinataire : </strong>
+                                             <xsl:value-of select="$lettre3//correspAction/persName[@type='recipient']"/>
+                                         </li>
+                                         <li><strong>Date d'écriture : </strong>
+                                             <xsl:value-of select="$lettre3//correspAction/date"/>
+                                         </li>
+                                         <li><strong>Lieu d'écriture : </strong>
+                                             <xsl:value-of select="$lettre3//correspAction/placeName"/>
+                                         </li>
+                                     </ul>
+                                </div>
+                            </div>
                         <!-- conservation -->
-                        <ul>
-                            <li>Conservée à : 
-                                <xsl:value-of select="$lettre3//msIdentifier/repository"/>
-                            </li>
-                            <li>Partie de :
-                                <xsl:value-of select="normalize-space($lettre3//msIdentifier/collection)"/>
-                            </li>
-                            <li>Cote :
-                                <xsl:value-of select="$lettre3//msIdentifier/idno"/>
-                            </li>
-                        </ul>
+                            <div class="col-md-4">
+                                <div style="background: #fff; border: 1px solid #8b3a2a; padding: 1rem; height: 100%;">
+                                    <h3><strong>Identification</strong></h3>
+                                    <ul style="list-style: none; padding: 0;">
+                                        <li><strong>Conservée à : </strong>
+                                            <xsl:value-of select="$lettre3//msIdentifier/repository"/>
+                                        </li>
+                                        <li><strong>Partie de : </strong>
+                                            <xsl:value-of select="normalize-space($lettre3//msIdentifier/collection)"/>
+                                        </li>
+                                        <li><strong>Cote : </strong>
+                                            <xsl:value-of select="$lettre3//msIdentifier/idno"/>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
                         <!--métadonnées de description physique-->
-                        <ul>
-                            <li><strong>Support : </strong>
-                                <xsl:value-of select="$lettre3//supportDesc/extent"/>
-                            </li>
-                            <li><strong>État : </strong>
-                                <xsl:value-of select="$lettre3//supportDesc/condition"/>
-                            </li>
-                            <li><strong>Mise en page : </strong>
-                                <xsl:value-of select="$lettre3//layoutDesc/layout"/>
-                            </li>
-                            <li><strong>Nombre de mains : </strong>
-                                <xsl:value-of select="$lettre3//handDesc/@hands"/>
-                            </li>
-                            <li><strong>Type d'écriture : </strong>
-                                <xsl:value-of select="$lettre3//handDesc/handNote"/>
-                            </li>
-                            <li><strong>Particularités : </strong>
-                                <xsl:value-of select="$lettre3//additions"/>
-                            </li>
-                        </ul>
+                            <div class="col-md-4">
+                                <div style="background: #fff; border: 1px solid #8b3a2a; padding: 1rem; height: 100%;">
+                                    <ul style="list-style: none; padding: 0;">
+                                        <li><strong>Support : </strong>
+                                            <xsl:value-of select="$lettre3//supportDesc/extent"/>
+                                        </li>
+                                        <li><strong>État : </strong>
+                                            <xsl:value-of select="$lettre3//supportDesc/condition"/>
+                                        </li>
+                                        <li><strong>Mise en page : </strong>
+                                            <xsl:value-of select="$lettre3//layoutDesc/layout"/>
+                                        </li>
+                                        <li><strong>Nombre de mains : </strong>
+                                            <xsl:value-of select="$lettre3//handDesc/@hands"/>
+                                        </li>
+                                        <li><strong>Type d'écriture : </strong>
+                                            <xsl:value-of select="$lettre3//handDesc/handNote"/>
+                                        </li>
+                                        <li><strong>Particularités : </strong>
+                                            <xsl:value-of select="$lettre3//additions"/>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                         <!-- métadonnées d'encodage-->
                         <ul>
                             <li><strong>Encodé par : </strong>
                                 <xsl:value-of select="$lettre3//respStmt/name"/>
-                            </li>
-                            <li><strong>Description du projet : </strong>
-                                <xsl:value-of select="$lettre3//projectDesc/ab"/>
                             </li>
                         </ul>
                         <!-- résumé du contenu de la lettre-->
@@ -791,25 +845,24 @@
                         </div>
                         
                     </div>
-                    <div class="row mt-4"> <!-- utilisation de bootstrap pour diviser la page en deux et mettre la transcription et l'image de la lettre côte à côteô-->
+                    <div class="row mt-4 align-items-start"> <!-- utilisation de bootstrap pour diviser la page en deux et mettre la transcription et l'image de la lettre côte à côteô-->
                         <div class="col-md-6" style="padding-left: 3rem;">
                         <h2>Corps de la lettre</h2>
-                            <div style="font-style: italic; text-transform: uppercase; margin-bottom: 1em;">
-                                <xsl:value-of select="upper-case($lettre3//fw)"/>
-                            </div>
                         <!-- appel des templates déjà défini pour les balises enfant des bodys des lettres 1 et 2-->
                         <div>
-                            <xsl:apply-templates select="$lettre3//body"/></div>
-                    </div>
+                            <xsl:apply-templates select="$lettre3//body"/>
+                        </div>
+                        </div>
                     
-                    <!-- affichage de l'image de la lettre3 -->
-                <div class="col-md-6" style="margin: 2em 0 2em 0;">
-                    <h2>Fac-similé</h2>
-                    <embed src="lettre_3.pdf" 
-                        type="application/pdf" 
-                        width="100%" 
-                        height="800px"/>
-                </div>
+                           <!-- affichage de l'image de la lettre3 -->
+                       <div class="col-md-6" style="margin: 2em 0 2em 0;">
+                           <h2>Fac-similé</h2>
+                           <embed src="lettre_3.pdf" 
+                               type="application/pdf" 
+                               width="100%" 
+                               height="800px"/>
+                       </div>
+                    </div>
                     </div>
                 </body>
                 <xsl:copy-of select="$footer"/>

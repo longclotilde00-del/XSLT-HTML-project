@@ -2,22 +2,6 @@
 /*on importe ici les polices google qui seront utilisées pour le site html*/
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Raleway:wght@300;400;500&display=swap');
 
-/*on définit les couleurs globales du site et es polices sous forme de variables pour pouvoir les intégrer plus facilement ensuite*/
-:root {
-    --fond: #faf6ef;
-    --texte: #2c2420;
-    --accent: #c0392b;
-    --couleur-secondaire: #1a1a2e;
-    --lien: #8b3a2a;
-    --personne: #8B4513;
-    --lieu: #2F4F4F;
-    --oeuvre: #4B0082;
-    --organisation: #006400;
-    --note: #f5f0e8;
-    --bordure: #d4c9b0;
-    --titre: 'Cormorant Garamond', Georgia, serif;
-    --body: 'Raleway', sans-serif;
-}
 
 /* ============================================================
    RESET ET BASE
@@ -94,7 +78,7 @@ body {
     border-color: #2c1f14 !important;
     background-color: #2c1f14 !important;
     color: #f5efe6 !important;
-    font-family: var(--police-titre) !important;
+    font-family: 'Cormorant Garamond', Georgia, serif !important;
     font-size: 0.85rem !important;
     font-weight: 300 !important;
     letter-spacing: 0.12em !important;
@@ -107,8 +91,8 @@ body {
 
 /*style des boutons au survol de la souris*/
 .btn-outline-secondary:hover {
-    background-color: var(--couleur-accent) !important;
-    border-color: var(--couleur-accent) !important;
+    background-color: #c0392b !important;
+    border-color: #c0392b !important;
     color: #fff !important;
     font-style: normal;
 }
@@ -126,17 +110,17 @@ h1 {
     margin: 1.5rem 0 1rem !important;
     text-align: center;
     padding-bottom: 0.8rem;
-    border-bottom: 1px solid var(--couleur-bordure);
+    border-bottom: 1px solid #d4c9b0;
 }
 
 /*style du titre h2*/
 h2 {
     font-size: 1.35rem !important;
-    color: var(--couleur-accent);
+    color: #c0392b;
     margin-top: 2rem !important;
     margin-bottom: 0.8rem !important;
     padding-bottom: 0.3rem;
-    border-bottom: 1px solid var(--couleur-bordure);
+    border-bottom: 1px solid #d4c9b0;
 }
 
 /*style du titre h3*/
@@ -147,14 +131,14 @@ h3 {
 
 /*style des liens cliquables*/
 a {
-    color: var(--couleur-lien);
+    color: #8b3a2a;
     text-decoration: none;
     transition: color 0.2s;
 }
 
 /*style des liens cliquables au survol de la souris*/
 a:hover {
-    color: var(--couleur-accent);
+    color: #c0392b;
     text-decoration: underline;
 }
 
@@ -180,7 +164,7 @@ body > div > div > p,
 /*style du nom des personnes avec un lien cliquable*/
 a[style*="color: #8B4513"] {
     color: #8B4513 !important;
-    border-bottom: 1px dotted var(--couleur-personne);
+    border-bottom: 1px dotted #8B4513;
     text-decoration: none !important;
     transition: background 0.15s;
 }
@@ -190,122 +174,117 @@ a[style*="color: #8B4513"]:hover {
     background-color: #fdf0e0;
 }
 
-
+/*style des noms de lieux*/
 a[style*="color: #2F4F4F"] {
-    color: var(--couleur-lieu) !important;
+    color: #2F4F4F !important;
     font-style: italic;
     text-decoration: none !important;
 }
 
+/*style des noms d'oeuvres*/
 em[style*="color: #4B0082"] {
-    color: var(--couleur-oeuvre) !important;
+    color: #4B0082 !important;
 }
 
+/*style des noms d'organisations*/
 a[style*="color: #006400"] {
-    color: var(--couleur-org) !important;
+    color: #006400 !important;
     text-decoration: none !important;
 }
 
+/*style pour les ajouts manuscrits dans le texte original*/
 span[style*="color: #8B0000"] {
-    color: var(--couleur-accent) !important;
+    color: #c0392b !important;
     background-color: rgba(192, 57, 43, 0.05);
     padding: 0 2px;
     border-radius: 2px;
 }
 
-/* Note de bas de page */
+/*style pour les note de bas de page*/
 div[style*="border-top: 1px solid gray"] {
-    background: var(--couleur-note) !important;
-    border-top: 2px solid var(--couleur-bordure) !important;
-    border-left: 3px solid var(--couleur-accent) !important;
+    background: #f5f0e8 !important;
+    border-top: 2px solid #d4c9b0 !important;
+    border-left: 3px solid #c0392b !important;
     padding: 1rem 1.2rem !important;
     font-size: 0.9rem !important;
     color: #666 !important;
     margin-top: 2rem !important;
 }
 
-/* ============================================================
-   MÉTADONNÉES
-   ============================================================ */
-
+/*style des métadonnées*/
 ul li strong {
-    color: var(--couleur-accent);
+    color: #c0392b;
     font-weight: 500;
 }
 
-/* ============================================================
-   INDEX — items
-   ============================================================ */
-
+/*style des liens cliqables vers les lettres dans l'index*/
 ul li a[href="lettre1.html"],
 ul li a[href="lettre2.html"],
 ul li a[href="lettre3.html"] {
     display: inline-block;
     font-size: 0.75rem;
-    background: var(--couleur-accent);
+    background: #c0392b;
     color: #fff !important;
     padding: 0.1em 0.5em;
     border-radius: 3px;
     margin-left: 0.4em;
-    font-family: var(--police-corps);
+    font-family: 'Raleway', sans-serif;
     font-weight: 400;
     letter-spacing: 0.04em;
     text-decoration: none !important;
     transition: background 0.2s;
 }
 
+/*style des liens cliquables au survol*/
 ul li a[href="lettre1.html"]:hover,
 ul li a[href="lettre2.html"]:hover,
 ul li a[href="lettre3.html"]:hover {
-    background: var(--couleur-lien);
+    background: #8b3a2a;
 }
 
-/* ============================================================
-   FAC-SIMILÉ
-   ============================================================ */
+/*style de l'image de la lettre originale*/
 
 img[alt*="Lettre"] {
-    border: 1px solid var(--couleur-bordure);
+    border: 1px solid #d4c9b0;
     box-shadow: 4px 4px 16px rgba(0,0,0,0.1);
     max-width: 100%;
     display: block;
     margin: 1rem auto;
 }
 
+/*style du pdf de la lettre originale*/
 embed {
-    border: 1px solid var(--couleur-bordure);
+    border: 1px solid #d4c9b0;
 }
 
-/* ============================================================
-   FOOTER
-   ============================================================ */
+/* style du footer*/
 
 footer {
-    background-color: var(--couleur-secondaire) !important;
+    background-color: #1a1a2e !important;
     color: #9b8fa0 !important;
     text-align: center;
     padding: 1.5rem 2rem !important;
     margin-top: 3rem !important;
-    border-top: 3px solid var(--couleur-accent);
+    border-top: 3px solid #c0392b;
 }
 
+/*ajout d'une bordure entre la page et le footer*/
 footer hr {
     border-color: #333 !important;
     margin-bottom: 0.8rem;
 }
 
+/*style du texte dans le footer*/
 footer p {
     margin: 0;
     color: #9b8fa0;
     font-size: 0.82rem;
-    font-family: var(--police-corps);
+    font-family: 'Raleway', sans-serif;
     font-weight: 300;
     letter-spacing: 0.03em;
 }
 
-/* ============================================================
-   RESPONSIVE
-   ============================================================ */
+/*responsivité des pages pour qu'elle s'adaptent aux plus petits*/
 
 @media (max-width: 768px) {
     h1 { font-size: 1.3rem !important; }

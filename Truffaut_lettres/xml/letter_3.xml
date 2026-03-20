@@ -3,12 +3,12 @@
    <teiHeader>
       <fileDesc>
          <titleStmt>
-            <title xml:lang="en">Letter from Alfred Hitchcock to François Truffaut</title>
+            <title xml:lang="en">Lettre d'Alfred Hitchcock à François Truffaut</title>
             <author>
                <persName ref="#Hit_002" xml:lang="en">Alfred Hitchcock</persName>
             </author>
             <respStmt xml:lang="en">
-               <resp>encoded by</resp>
+               <resp>encodé par</resp>
                <name>Clotilde Long</name>
             </respStmt>
          </titleStmt>
@@ -49,29 +49,29 @@
                <person xml:id="Truf_001">
                   <persName xml:lang="fr">François Truffaut</persName>
                   <idno type="wikidata">Q53002</idno>
-                  <note>French film director (1932–1984)</note>
+                  <note>Réalisateur français (1932–1984)</note>
                </person>
                <person xml:id="Hit_002">
                   <persName xml:lang="en">Alfred Hitchcock</persName>
                   <idno type="wikidata">Q7374</idno>
-                  <note>British filmmaker (1899-1980)</note>
+                  <note>Réalisateur anglais (1899-1980)</note>
                </person>
                <person xml:id="Jac_003">
                   <persName xml:lang="fr">Gilles Jacob</persName>
                   <idno type="wikidata">Q3106313</idno>
-                  <note>French essayist, film critic and film director (1930-)</note>
+                  <note>Essayiste, critique de cinéma et réalisateur français (1930-)</note>
                </person>
                <person xml:id="Giv_004">
                   <persName xml:lang="fr">Claude de Givray</persName>
                   <idno type="wikidata">Q615768</idno>
-                  <note>French film director (1933-)</note>
+                  <note>Réalisateur français (1933-)</note>
                </person>
             </listPerson>
             <listOrg>
                <org xml:id="Bnf_001">
                   <orgName>Bibliothèque nationale de France</orgName>
                   <idno type="wikidata">Q193563</idno>
-                  <note>national library of France in<placeName ref="#Par_001">Paris</placeName></note>
+                  <note>Bibliothèque nationale de France à <placeName ref="#Par_001">Paris</placeName></note>
                </org>
             </listOrg>
             <msDesc>
@@ -85,12 +85,12 @@
                   <idno>16-Z-10387 (9718)</idno>
                   </msIdentifier>
                <msContents xml:lang="en">
-                  <summary>This letter is written by Alfred Hitchcock and addressed to François Truffaut. 
-                     Hitchcock asks Truffaut for advice on finding ideas for films and expresses his difficulty in coming up with them.</summary>
+                  <summary>Cette lettre a été écrite par Alfred Hitchcock et est adressée à François Truffaut. 
+                     Hitchcock demande conseil à Truffaut pour trouver des idées de sujets de films, lui confiant notamment ses pannes d'inspirations.</summary>
                   <msItem n="1">
                      <locus from="p.518" to="p.519">page 518-519</locus>
                      <author ref="#Hit_002">Alfred Hitchcock</author>
-                     <title>Letter from Alfred Hitchcock to François Truffaut</title>
+                     <title>Lettre d'Alfred Hitchcock à François Truffaut</title>
                   </msItem>
                </msContents>
                <physDesc xml:lang="en">
@@ -99,11 +99,11 @@
                         <extent>1 page</extent>
                      </supportDesc>
                      <layoutDesc>
-                        <layout columns="1">Written in one column</layout>
+                        <layout columns="1">Écrite en une seule colonne</layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc hands="1">
-                     <handNote xml:id="typed">Machine typed text</handNote>
+                     <handNote xml:id="typed">Texte tapé à la machine</handNote>
                   </handDesc>      
                </physDesc>
                <history>
@@ -166,7 +166,7 @@
       <body>
          <div type= "letter" hand="typed">
             <fw type="letterhead" place="top-center">
-               <persName role="author" ref="#Hit_002">Alfred Hitchcock</persName>à<persName role="recipient" ref="#Truf_001">François Truffaut</persName>
+               <persName role="author" ref="#Hit_002">Alfred Hitchcock</persName> à <persName role="recipient" ref="#Truf_001">François Truffaut</persName>
             </fw>
             <opener>
                <dateline>
@@ -174,24 +174,24 @@
                </dateline>
                <salute>Cher <persName role="recipient" ref="#Truf_001">François,</persName></salute>
             </opener>
-            <p>Merci beaucoup pour votre lettre manuscrite.
-               <lb/>Vous m’y parlez de votre prochain film. Ce que j’aimerais savoir, c’est comment vous
-               <lb/>trouvez les sujets de vos films ! Pour le moment, c’est en vain que j’essaie d’en trouver un.
-               <lb/>Vous êtes maintenant, comme vous vous en rendez compte, un homme libre de faire tout ce
-               <lb/>qu’il veut. Quant à moi, je ne peux pas faire ce qu’on attend de moi, c’est-à-dire un thriller ou une
+            <p rend="indent">Merci beaucoup pour votre lettre manuscrite.
+               <lb rend="indent"/>Vous m’y parlez de votre prochain film. Ce que j’aimerais savoir,<lb/> c’est comment vous
+               trouvez les sujets de vos films ! Pour le moment,<lb/> c’est en vain que j’essaie d’en trouver un.<lb rend="indent"/>
+               Vous êtes maintenant, comme vous vous en rendez compte, un<lb/> homme libre de faire tout ce
+               qu’il veut. Quant à moi, je ne peux<lb/> pas faire ce qu’on attend de moi, c’est-à-dire un thriller ou une
                <lb/>histoire à suspense, et cela me donne du mal.
-               <lb/>Il y a tant d’histoires qui paraissent ne traiter que de néo-nazis, de Palestiniens en lutte avec des
-               <lb/>Israéliens, etc.
-               <lb/>Et, comme vous le voyez, aucun de ces sujets ne présente de conflit qui possède une dimension
-               <lb/>humaine.
-               <lb/>Comment peut-on avoir un Arabe de comédie ! Cela n’existe pas, pas plus qu’un Israélite amusant.
-               <lb/>Je prends ces deux exemples, car on me les a mis sur mon bureau pour que je les étudie.
-               <lb/>Je me dis parfois que la meilleure oeuvre comique ou dramatique pourrait se jouer ici, dans mon
-               <lb/>bureau avec Peggy, Sue et Alpha. Le seul inconvénient, c’est qu’il faudrait en tuer une, ce que je
+               <lb rend="indent"/>Il y a tant d’histoires qui paraissent ne traiter que de néo-nazis,<lb/> de Palestiniens en lutte avec des
+               Israéliens, etc.<lb rend="indent"/>
+               Et, comme vous le voyez, aucun de ces sujets ne présente<lb/> de conflit qui possède une dimension
+               humaine.<lb rend="indent"/>
+               Comment peut-on avoir un Arabe de comédie ! Cela n’existe pas,<lb/> pas plus qu’un Israélite amusant.
+               Je prends ces deux exemples, car<lb/> on me les a mis sur mon bureau pour que je les étudie.<lb rend="indent"/>
+               Je me dis parfois que la meilleure oeuvre comique ou dramatique<lb/> pourrait se jouer ici, dans mon
+               bureau avec Peggy, Sue et Alpha.<lb/> Le seul inconvénient, c’est qu’il faudrait en tuer une, ce que je
                <lb/>regretterais profondément.
             </p>
             <closer>
-               <salute>En tout cas, <persName ref="#Truf_001">François</persName>, bonne chance pour votre prochain film. 
+               <salute rend="indent">En tout cas, <persName ref="#Truf_001">François</persName>, bonne chance pour votre prochain film. 
                   <lb/>Je vous prie de croire en mon meilleur souvenir.
                   <lb/>Bien affectueusement,</salute>
                <signed><persName ref="#Hit_002">Hitch</persName></signed>

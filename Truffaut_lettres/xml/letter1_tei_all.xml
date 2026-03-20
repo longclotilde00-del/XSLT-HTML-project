@@ -7,12 +7,12 @@
   <teiHeader xml:lang="en">
       <fileDesc>
          <titleStmt>
-            <title>Letter from François Truffaut to Jean Gruault</title>
+            <title>Lettre de François Truffaut à Jean Gruault</title>
             <author>
                <persName ref="#Truf_001" xml:lang="fr">François Truffaut</persName>
             </author>
             <respStmt>
-               <resp>encoded by</resp>
+               <resp>encodé par</resp>
                <name>Clotilde Long</name>
             </respStmt>
          </titleStmt>
@@ -43,17 +43,17 @@
                <person xml:id="Truf_001">
                   <persName xml:lang="fr">François Truffaut</persName>
                   <idno type="wikidata">11927177t</idno>
-                  <note>French film director (1932–1984)</note>
+                  <note>Réalisateur français (1932–1984)</note>
                </person>
                <person xml:id="Gru_002">
                   <persName xml:lang="fr">Jean Gruault</persName>
                   <idno type="wikidata">120401267</idno>
-                  <note>French screenwriter (1924-2015)</note>
+                  <note>Scénariste français (1924-2015)</note>
                </person>
                <person xml:id="Roch_003">
                   <persName xml:lang="fr">Henri-Pierre Roché</persName>
                   <idno type="wikidata">119222965</idno>
-                  <note>French writer, art collector and art dealer (1879-1959)</note>
+                  <note>Écrivain français, collectionneur d'art et marchand d'art (1879-1959)</note>
                </person>
             </listPerson>
             <listPlace>
@@ -77,34 +77,34 @@
                   <idno>GRUA 52</idno>
                </msIdentifier>
                <msContents>
-                  <summary>This letter is written by François Truffaut and addressed to Jean Gruault, his friend and french screenwriter. 
-                     This letter bears witness to the cowriting of the famous film "Jules et Jim". François Truffaut gives reading indications to Jean Gruault, 
-                     for the novel "Jules et Jim" by Jean Pierre Roché, which he plans to adapt for the cinema.</summary>
+                  <summary>Cette lettre est écrite par François Truffaut et adressée par Jean Gruault, l'un de ses amis scénariste. 
+                     Cette lettre témoigne de la co-écriture du célèbre film « Jules et Jim ». François Truffaut donne des indications de lecture à Jean Gruault, 
+                     concernant le roman « Jules et Jim » de Jean-Pierre Roché, qu’il envisage d’adapter au cinéma.</summary>
                   <msItem n="3">
-                     <locus from="p.5" to="p.5">page 5, letter 3</locus>
+                     <locus from="p.5" to="p.5">page 5, lettre 3</locus>
                      <author ref="#Truf_001">François Truffaut</author>
-                     <title>Letter from François Truffaut to Jean Gruaut</title>
+                     <title>Lettre de François Truffaut à Jean Gruaut</title>
                   </msItem>
                </msContents>
                <physDesc>
                   <objectDesc>
                      <supportDesc material='paper'>
                         <extent>1 page</extent>
-                        <condition>The letter has three folds</condition>
+                        <condition>La lettre a subit trois pliures</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout columns="1">Written in one column</layout>
+                        <layout columns="1">Écrite en une colonne</layout>
                      </layoutDesc>
                   </objectDesc>
                    <handDesc hands="2">
-                      <handNote xml:id="typed">Machine typed text</handNote>
-                      <handNote xml:id="handwritten">Handwritten annotations and footnotes</handNote>
+                      <handNote xml:id="typed">Texte tapé à la machine à écrire</handNote>
+                      <handNote xml:id="handwritten">Annotations et notes de bas de page manuscrites</handNote>
                    </handDesc>       
-                  <additions>The letter contain handwritten additions and deletions, in particular a footnote marked with an asterisk</additions>
+                  <additions>La lettre contient des annotations manuscrites et des suppressions, en particulier une note de bas de page marquée d'une astérisque.</additions>
                </physDesc>
                <history>
-                  <origin>This letter was written by <persName ref="#Truf_001">François Truffaut</persName> in 
-                  <origPlace ref="#Par_001">Paris</origPlace> in 
+                  <origin>Cette lettre a été écrite par <persName ref="#Truf_001">François Truffaut</persName> à 
+                  <origPlace ref="#Par_001">Paris</origPlace> en 
                   <origDate when="1963-02-27"></origDate> 
                   </origin>
                </history>

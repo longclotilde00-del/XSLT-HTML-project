@@ -5,12 +5,12 @@
    <teiHeader xml:lang="en">
       <fileDesc>
          <titleStmt>
-            <title>Letter from François Truffaut to Georges Delerue</title>
+            <title>Lettre de François Truffaut à Georges Delerue</title>
             <author>
                <persName ref="#Truf_001" xml:lang="fr">François Truffaut</persName>
             </author>
             <respStmt>
-               <resp>encoded by</resp>
+               <resp>encodé par</resp>
                <name>Clotilde Long</name>
             </respStmt>
          </titleStmt>
@@ -39,54 +39,54 @@
                <person xml:id="Truf_001">
                   <persName xml:lang="fr">François Truffaut</persName>
                   <idno type="wikidata">Q53002</idno>
-                  <note>French film director (1932–1984)</note>
+                  <note>Réalisateur français (1932–1984)</note>
                </person>
                <person xml:id="Del_002">
                   <persName xml:lang="fr">Georges Delerue</persName>
                   <idno type="wikidata">Q435034</idno>
-                  <note>French composer (1925-1992)</note>
+                  <note>Compositeur français (1925-1992)</note>
                </person>
                <person xml:id="Souch_003">
                   <persName xml:lang="fr">Alain Souchon</persName>
                   <idno type="wikidata">Q53453</idno>
-                  <note>French recording artist, singer, songwriter and actor (1944-)</note>
+                  <note>Chanteur, compositeur et acteur français (1944-)</note>
                </person>
                <person xml:id="Tren_004">
                   <persName xml:lang="fr">Charles Trenet</persName>
                   <idno type="wikidata">Q212549</idno>
-                  <note>French singer-songwriter (1913-2001)</note>
+                  <note>Chanteur et compositeur français (1913-2001)</note>
                </person>
                <person xml:id="Léaud_005">
                   <persName xml:lang="fr">Jean-Pierre Léaud</persName>
                   <idno type="wikidata">Q295834</idno>
-                  <note>French actor (1944-)</note>
+                  <note>Acteur français (1944-)</note>
                </person>
                <person xml:id="Pis_006">
                   <persName xml:lang="fr">Marie-France Pisier</persName>
                   <idno type="wikidata">Q239893</idno>
-                  <note>French actress (1944-2011)</note>
+                  <note>Actrice française (1944-2011)</note>
                </person>
                <person xml:id="Jad_007">
                   <persName xml:lang="fr">Claude Jade</persName>
                   <idno type="wikidata">Q183471</idno>
-                  <note>French actress (1948-2006)</note>
+                  <note>Actrice française (1948-2006)</note>
                </person>
                <person xml:id="Dani_008">
                   <persName xml:lang="fr">Dani</persName>
                   <idno type="wikidata">Q548211</idno>
-                  <note>French actress and singer(1944-2022)</note>
+                  <note>Actrice et chanteuse française (1944-2022)</note>
                </person>
                <person xml:id="Doro_009">
                   <persName xml:lang="fr">Dorothée</persName>
                   <idno type="wikidata">Q448910</idno>
-                  <note>French singer and TV presenter(1953-)</note>
+                  <note>Chanteuse et présentatrice française (1953-)</note>
                </person>
             </listPerson>
             <listPerson type="fictional">
             <person xml:id="Doin_001">
                <persName xml:lang="fr">Antoine Doinel</persName>
                <idno type="wikidata">Q21562043</idno>
-               <note>Film character in Truffaut's films : 
+               <note>Personnage de film dans les films de François Truffaut : 
                   <title>Les Quatre Cents Coups</title>, 
                   <title>L'Amour à vingt ans</title>, 
                   <title>Antoine et Colette</title>, 
@@ -109,12 +109,12 @@
                <org xml:id="Cin_001">
                   <orgName>Cinémathèque française</orgName>
                   <idno>Q174274</idno>
-                  <note>film museum and cinematheque in <placeName ref="#Par_001">Paris</placeName>, France</note>
+                  <note>Musée du cinéma et cinémathèque à <placeName ref="#Par_001">Paris</placeName>, France</note>
                </org>
                <org xml:id="Ant_002">
                   <orgName>Antenne 2</orgName>
                   <idno>Q2852682</idno>
-                  <note>French television channel</note>
+                  <note>Chaine de télévision française</note>
                </org>
             </listOrg>
             <listBibl>
@@ -165,14 +165,14 @@
                   <author ref="#Souch_003">Alain Souchon</author>
                   <date>1979</date>
                   <idno type="wikidata">Q55590628</idno>
-                  <note type="genre">song</note>
+                  <note type="genre">Chanson</note>
                </bibl>
                <bibl xml:id="Que_008">
                   <title>Que reste-t-il de nos amours?</title>
                   <author ref="#Tren_004">Charles Trenet</author>
                   <date>1942</date>
                   <idno type="wikidata">Q1283107</idno>
-                  <note type="genre">song</note>
+                  <note type="genre">Chanson</note>
                </bibl>
             </listBibl>
             <msDesc>
@@ -190,25 +190,25 @@
                   </altIdentifier>
                </msIdentifier>
                <msContents>
-                  <summary>This letter is written by François Truffaut and addressed to Georges Delerue, his friend and french composer. 
-                     This letter shows that François Truffaut asked Georges Delerue to work with him on the music for his new movie, "l'Amour en fuite".
-                     Truffaut gives a brief description of the film and its characters.</summary>
+                  <summary>Cette lettre a été écrite par François Truffaut et adressée à Georges Delerue, l'un de ses amis compositeur. 
+                     François Truffaut y demande à Georges Delerue de collaborer avec lui sur la musique de son nouveau film, « L'Amour en fuite ».
+                     IL y décrit briévement le film et ses personnages.</summary>
                </msContents>
                <physDesc>
                   <objectDesc>
                      <supportDesc material='paper'>
                         <extent>1 page</extent>
-                        <condition>The letter has one fold on the right corner</condition>
+                        <condition>La lettre a subit une pliure sur le coin supérieur droit</condition>
                      </supportDesc>
                      <layoutDesc>
-                        <layout columns="1">Written in one column</layout>
+                        <layout columns="1">Écrit en une seule colonne</layout>
                      </layoutDesc>
                   </objectDesc>
                   <handDesc hands="2">
-                     <handNote xml:id="typed">Machine typed text</handNote>
-                     <handNote xml:id="handwritten">Handwritten name on the top and underlining</handNote>
+                     <handNote xml:id="typed">Texte tapé à la machine à écrire</handNote>
+                     <handNote xml:id="handwritten">Soulignements et nom manuscrit en haut à gauche</handNote>
                   </handDesc>       
-                  <additions>The letter contain handwritten name and underlining in two different color : red and black.</additions>
+                  <additions>La lettre contient un nom manuscrit et du texte souligné à la main dans deux couleurs différentes : rouge et noir.</additions>
                </physDesc>
                <history>
                   <origin>This letter was written by <persName ref="#Truf_001">François Truffaut</persName> in 
@@ -281,24 +281,24 @@
                </dateline>
                <salute>Mon cher <persName role="recipient" ref="#Del_002">Georges,</persName></salute>
             </opener>
-            <p hand="#typed">Je serais heureux de renouer notre collaboration à la faveur du film que je tourne
-               <lb/>actuellement et qui s’intitule : <hi rend="underline" style="color: black,red;"><bibl ref="#Amour_006">“l’Amour en fuite”.</bibl></hi> 
+            <p hand="#typed">Je serais heureux de renouer notre collaboration<lb/> à la faveur du film que je tourne
+               actuellement et qui s’intitule :<lb/> <hi rend="underline" style="color: black,red;"><bibl ref="#Amour_006">“l’Amour en fuite”.</bibl></hi> 
             </p>
-            <p hand="#typed">Il s’agit des nouvelles aventures d’<persName ref="#Doin_001">Antoine Doinel</persName>, probablement le dernier film de la série.
-               <lb/><persName ref="#Léaud_005">Jean-Pierre Léaud</persName> y retrouve certaines de ses partenaires : <persName ref="#Pis_006">Marie-France Pisier</persName>, <persName ref="#Jad_007">Claude Jade</persName> et
-               <lb/>même la <persName ref="#Dani_008">Dani</persName> de <hi rend="underline" style="color: black;"><bibl ref="#Nuit_001">“La Nuit Américaine”.</bibl></hi> Ainsi qu’une nouvelle jeune femme, <persName ref="#Doro_009">Dorothée</persName> (la plus 
-               <lb/>jeune speakerine d’<orgName ref="#Ant_002">Antenne 2</orgName>). Nous aurons la chance d’introduire dans le film des flashes-back
-               <lb/>très authentiques puisqu’ils proviennent des <hi rend="underline" style="color: black;"><bibl ref="#Quatre_002">“Quatre Cents coups”.</bibl></hi> De <hi rend="underline" style="color: black;"><bibl ref="#Amour_003">“l’Amour à vingt ans”.</bibl></hi> De
-               <lb/><hi rend="underline" style="color: black;"><bibl ref="#Bais_004">“Baisers Volés”</bibl></hi> et de <hi rend="underline" style="color: black;"><bibl ref="#Domi_005">“Domicile Conjugal”</bibl></hi> (et très brièvement de <hi rend="underline" style="color: black;"><bibl ref="#Nuit_001">“La Nuit Américaine”</bibl>).</hi>
-               <lb/>Naturellement nous nous efforcerons de choisir des extraits sans musique ou dont il est possible de
-               <lb/>refaire le mixage.
+            <p hand="#typed">Il s’agit des nouvelles aventures d’<persName ref="#Doin_001">Antoine Doinel</persName>,<lb/> probablement le dernier film de la série.
+               <persName ref="#Léaud_005">Jean-Pierre Léaud</persName> y<lb/> retrouve certaines de ses partenaires : <persName ref="#Pis_006">Marie-France Pisier</persName>,<lb/> <persName ref="#Jad_007">Claude Jade</persName> et
+               même la <persName ref="#Dani_008">Dani</persName> de <hi rend="underline" style="color: black;"><bibl ref="#Nuit_001">“La Nuit Américaine”.</bibl></hi> Ainsi <lb/> qu’une nouvelle jeune femme, <persName ref="#Doro_009">Dorothée</persName> (la plus 
+               jeune speakerine <lb/> d’<orgName ref="#Ant_002">Antenne 2</orgName>). Nous aurons la chance d’introduire dans le film <lb/> des flashes-back
+               très authentiques puisqu’ils proviennent <lb/> des <hi rend="underline" style="color: black;"><bibl ref="#Quatre_002">“Quatre Cents coups”.</bibl></hi> De <hi rend="underline" style="color: black;"><bibl ref="#Amour_003">“l’Amour à vingt ans”.</bibl></hi> De
+               <hi rend="underline" style="color: black;"><bibl ref="#Bais_004">“Baisers <lb/> Volés”</bibl></hi> et de <hi rend="underline" style="color: black;"><bibl ref="#Domi_005">“Domicile Conjugal”</bibl></hi> (et très brièvement de <hi rend="underline" style="color: black;"><bibl ref="#Nuit_001">“La Nuit <lb/> Américaine”</bibl>).</hi>
+               Naturellement nous nous efforcerons de choisir <lb/> des extraits sans musique ou dont il est possible de
+               refaire le <lb/> mixage.
             </p>
-            <p hand="#typed">Je ne vous cache pas que c’est une sorte de patchwork et qu’à mon avis, le travail musical 
-               <lb/>sera à la fois difficile et passionnant. 
+            <p hand="#typed">Je ne vous cache pas que c’est une sorte de patchwork <lb/> et qu’à mon avis, le travail musical 
+               sera à la fois difficile et<lb/> passionnant. 
             </p>
-            <p hand="#typed"><persName ref="#Souch_003">Alain Souchon</persName> est en train d’écrire une chanson intitulée <bibl ref="#Amour_007">“L’Amour en fuite”</bibl> et il est 
-               <lb/>possible ausi qu’à trois ou quatre reprises, nous entendions, comme dans <hi rend="underline" style="color: black;"><bibl ref="#Bais_004">“Baisers Volés”</bibl>,</hi> quelques 
-               <lb/>bouffées du thème de <persName ref="#Tren_004">Trénet</persName> : <bibl ref="#Que_008">“Que reste-t-il de nos amours?”</bibl>. 
+            <p hand="#typed"><persName ref="#Souch_003">Alain Souchon</persName> est en train d’écrire une chanson <lb/> intitulée <bibl ref="#Amour_007">“L’Amour en fuite”</bibl> et il est 
+               possible ausi qu’à trois<lb/> ou quatre reprises, nous entendions, comme dans <hi rend="underline" style="color: black;"><bibl ref="#Bais_004">“Baisers Volés”</bibl>,<lb/></hi> quelques 
+               bouffées du thème de <persName ref="#Tren_004">Trénet</persName> : <bibl ref="#Que_008">“Que reste-t-il de nos<lb/> amours?”</bibl>. 
             </p>
          </div>
       </body>

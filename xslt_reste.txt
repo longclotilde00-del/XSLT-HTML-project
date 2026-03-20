@@ -1,0 +1,5 @@
+xslt : 
+- traduire les métadonnées en français 
+- faire que le fac similé et le body soient sur le même niveau
+- organiser les métadonnées visuellement 
+- vérifier que bootstrap soit cohérent avec le css, sinon : mettre ce qui peut être fait avec bootstrap dans le html et tout le reste dans le css 
