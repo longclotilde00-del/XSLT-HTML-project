@@ -152,8 +152,8 @@ ul li {
 /*style du corps de chaque lettre*/
 
 /*style du conteneur du corps de chaue lettre*/
-body > div > div > p,
-.corps-lettre-wrapper {
+/*style du conteneur du corps de chaque lettre*/
+.corps-lettre {
     font-family: 'Cormorant Garamond', Georgia, serif;
     font-size: 1.05rem;
     line-height: 2;
@@ -294,4 +294,20 @@ footer p {
     body > div > div > p {
         padding: 1.2rem;
     }
+}
+
+/*style des encarts de métadonnées*/
+.metadonnees {
+    background: #fff;
+    border: 1px solid #8b3a2a;
+    padding: 1rem;
+    height: 100%;
+    border-radius: 3px;
+}
+
+/*style des listes de métadonnées*/
+.metadonnees ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
