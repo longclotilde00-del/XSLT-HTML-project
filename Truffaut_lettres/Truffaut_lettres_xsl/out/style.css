@@ -3,9 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Raleway:wght@300;400;500&display=swap');
 
 
-/* ============================================================
-   RESET ET BASE
-   ============================================================ */
 
 *, *::before, *::after {
     box-sizing: border-box;
@@ -38,10 +35,6 @@ body {
 }
 
 
-/* Suppression de la ligne en bas de la bannière */
-.banniere::before {
-    display: none;
-}
 
 /*style du titre de la bannière*/
 .banniere h1 {
@@ -69,32 +62,36 @@ body {
     margin-bottom: 0 !important;
 }
 
-.navbar-nav.flex-row .nav-link {
-    padding: 0 !important;
-}
 
 /*style des boutons de navigation*/
-   .btn-outline-secondary {
-    border-color: #2c1f14 !important;
-    background-color: #2c1f14 !important;
+   .bouton-nav {
+    background-color: #2c1f14;
     color: #f5efe6 !important;
-    font-family: 'Cormorant Garamond', Georgia, serif !important;
-    font-size: 0.85rem !important;
-    font-weight: 300 !important;
-    letter-spacing: 0.12em !important;
-    text-transform: uppercase !important;
-    padding: 0.3rem 0.9rem !important;
-    border-radius: 0 !important;
-    transition: all 0.2s ease !important;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.5rem 1.4rem;
     font-style: italic;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    display: inline-block;
+    min-width: 10rem; 
+    text-align: center;
 }
 
 /*style des boutons au survol de la souris*/
-.btn-outline-secondary:hover {
-    background-color: #c0392b !important;
-    border-color: #c0392b !important;
+.bouton-nav:hover {
+    background-color: #c0392b;
     color: #fff !important;
     font-style: normal;
+    text-decoration: none !important;
+    color: #fff !important;
+}
+
+.bouton-nav:visited {
+    color: #f5efe6 !important;
+    background-color: #2c1f14;
 }
 
 /*police des titres pour les différentes pages du site*/
@@ -149,17 +146,6 @@ ul li {
     font-weight: 300;
 }
 
-/*style du corps de chaque lettre*/
-
-/*style du conteneur du corps de chaue lettre*/
-/*style du conteneur du corps de chaque lettre*/
-.corps-lettre {
-    font-family: 'Cormorant Garamond', Georgia, serif;
-    font-size: 1.05rem;
-    line-height: 2;
-    padding-left: 4rem;
-    padding-right: 4rem;
-}
 
 /*style du nom des personnes avec un lien cliquable*/
 a[style*="color: #8B4513"] {
@@ -218,9 +204,9 @@ ul li strong {
 }
 
 /*style des liens cliqables vers les lettres dans l'index*/
-ul li a[href="lettre1.html"],
-ul li a[href="lettre2.html"],
-ul li a[href="lettre3.html"] {
+body ul li a[href="lettre1.html"],
+body ul li a[href="lettre2.html"],
+body ul li a[href="lettre3.html"] {
     display: inline-block;
     font-size: 0.75rem;
     background: #c0392b;
@@ -236,11 +222,12 @@ ul li a[href="lettre3.html"] {
 }
 
 /*style des liens cliquables au survol*/
-ul li a[href="lettre1.html"]:hover,
-ul li a[href="lettre2.html"]:hover,
-ul li a[href="lettre3.html"]:hover {
+body ul li a[href="lettre1.html"]:hover,
+body ul li a[href="lettre2.html"]:hover,
+body ul li a[href="lettre3.html"]:hover {
     background: #8b3a2a;
 }
+
 
 /*style de l'image de la lettre originale*/
 
@@ -268,11 +255,7 @@ footer {
     border-top: 3px solid #c0392b;
 }
 
-/*ajout d'une bordure entre la page et le footer*/
-footer hr {
-    border-color: #333 !important;
-    margin-bottom: 0.8rem;
-}
+
 
 /*style du texte dans le footer*/
 footer p {
@@ -285,18 +268,13 @@ footer p {
 }
 
 /*responsivité des pages pour qu'elle s'adaptent aux plus petits*/
-
 @media (max-width: 768px) {
     h1 { font-size: 1.3rem !important; }
     h2 { font-size: 1.1rem !important; }
 
-    .corps-lettre-wrapper,
-    body > div > div > p {
-        padding: 1.2rem;
-    }
 }
 
-/*style des encarts de métadonnées*/
+/*style des cartes de métadonnées*/
 .metadonnees {
     background: #fff;
     border: 1px solid #8b3a2a;

@@ -369,24 +369,23 @@
         </xsl:result-document>
     </xsl:template>
     
-    <xsl:template name="Lettre1"> <!-- template contenant la première lettre du corpus -->
+    <xsl:template name="Lettre1"> <!-- template qui renvoie la page html sur la première lettre du corpus -->
         <xsl:result-document href="out/lettre1.html" method="html" indent="yes">
             <html>
-                <xsl:copy-of select="$head"/>
+                <xsl:copy-of select="$head"/><!-- copie du head commun à toutes les pages du site -->
                 <body style="margin: 2em 20em 5em 20em; font-family: 'Roboto', serif;">
                     <!--ajout d'un conteneur pour créer des marges autour des éléments de la page-->
                     <div class="container py-4">
-                    <xsl:copy-of select="$header"/>
-                    <h1 style="text-align: center;"><xsl:value-of select="$lettre1//titleStmt/title"/></h1>
+                    <xsl:copy-of select="$header"/><!--copie du header commun à toutes les pages-->
+                    <h1 style="text-align: center;"><xsl:value-of select="$lettre1//titleStmt/title"/></h1><!-- on récupère la valeur de la balise title pour afficher le titre de la lettre -->
                         <h2>Métadonnées</h2>
                     <div class="row g-3 mt-2">
                         <!--création de trois colonnes de métadonnées réparties sur la largeur de la page-->
                         <div class="col-md-4">
                             <div class="metadonnees">
-                                <h3><strong>Identification</strong></h3>
+                                <h3><strong>Identification</strong></h3><!-- métadonnées d'identification générales -->
                                 <ul>
-                                <!--On récupère ici les métadonnées pertinentes avec des xsl:value-of-->
-                                <!--métadonnées générales-->
+                                <!--On récupère ici les métadonnées générales avec des xsl:value-of-->
                                     <li><strong>Titre : </strong>
                                         <xsl:value-of select="$lettre1//titleStmt/title"/>
                                     </li>
@@ -410,11 +409,12 @@
                             <div class="metadonnees">
                                 <h3><strong>Conservation</strong></h3>
                                 <ul>
+                                    <!--on affiche la valeur des balises des métadonnées de conservation-->
                                     <li><strong>Conservée à : </strong>
                                         <xsl:value-of select="$lettre1//msIdentifier/repository"/>
                                     </li>
                                     <li><strong>Partie de : </strong>
-                                        <xsl:value-of select="normalize-space($lettre1//msIdentifier/collection)"/>
+                                        <xsl:value-of select="$lettre1//msIdentifier/collection"/>
                                     </li>
                                     <li><strong>Cote : </strong>
                                         <xsl:value-of select="$lettre1//msIdentifier/idno"/>
@@ -426,6 +426,7 @@
                         <div class="col-md-4">
                             <div class="metadonnees">
                                 <h3><strong>Description</strong></h3>
+                                <!-- on affiche la valeur des balises de métadonnées de description -->
                                 <ul>
                                     <li><strong>Support : </strong>
                                         <xsl:value-of select="$lettre1//supportDesc/@material"/>
@@ -463,10 +464,10 @@
                             <p><xsl:value-of select="$lettre1//msContents/summary"/></p>
                         </div>
                     </div>
-                    <div class="row mt-4"> <!-- utilisation de bootstrap pour diviser la page en deux et mettre la transcription et l'image de la lettre côte à côteô-->
+                    <div class="row mt-4"> <!-- utilisation de bootstrap pour diviser la page en deux et mettre la transcription et l'image de la lettre côte à côte-->
                         <div class="col-md-6">
                         <h2>Corps de la lettre</h2>
-                        <!-- utilisation de apply templates pour traiter les balises enfant du corps du texte de la lettre et ainsi garder la mise en forme conforme pour chaque élément de la lettre. 
+                        <!-- Utilisation de xsl:apply templates pour traiter les templates des balises enfant du corps du texte de la lettre et ainsi garder une mise en forme conforme pour chaque élément. 
                             Les templates pour chaque élément du corps de la lettre se situent plus bas-->
                         <p><xsl:apply-templates select="$lettre1//body"/></p>
                     </div>
@@ -480,15 +481,14 @@
                 </div>
                     </div>
                     </div>
-                    <xsl:copy-of select="$footer"/>
+                    <xsl:copy-of select="$footer"/><!-- copie du footer commun à toutes les pages -->
                 </body>
             </html>
         </xsl:result-document>
     </xsl:template>
     
     <!-- Création de templates pour chaque élément enfant du corps de la lettre, afin d'obtenir une mise en forme conforme à la msie en forme originale-->
-    <!--template pour l'ouverture de la lettre-->
-    <xsl:template match="opener">
+    <xsl:template match="opener"><!--template pour l'ouverture de la lettre-->
         <div style="margin-bottom: 1em;">
             <!-- on applique ce template à tous les enfants de "opener" pour qu'ils soient placés en haut à gauche du corps de la lettre -->
             <xsl:apply-templates/>
@@ -502,16 +502,16 @@
         </p>
     </xsl:template>
     
-    <!-- création d'une condition pour cet élément qui est différent pour les lettres 2 et 3 -->
+    <!-- création d'une condition pour la balise "fw", qui correspond à un élément situé avant la balise "opener" et dont l'aspect diffère pour les lettres 2 et 3 -->
     <xsl:template match="fw">
         <xsl:choose>
-            <!--mise en majuscules pour la lettre 3-->
+            <!--si la balise fw est contenue dans la lettre 3, le texte est mis en italique, en majuscules et centré-->
             <xsl:when test=". = $lettre3//fw">
                 <div style="font-style: italic; text-transform: uppercase; text-align: center; margin-bottom: 1em;">
                     <xsl:apply-templates/>
                 </div>
             </xsl:when>
-            <xsl:otherwise>
+            <xsl:otherwise> <!-- sinon, (pour la lettre 2), le texte est seulement mis en italique -->
                 <div style="font-style: italic; margin-bottom: 1em;">
                     <xsl:apply-templates/>
                 </div>
@@ -535,12 +535,12 @@
     <!--pour les retours à la ligne, on utilise une boucle pour créer visuellement un alinéa lorsqu'il y en a un-->
     <xsl:template match="lb">
         <xsl:choose>
-            <!--retour à la ligne avec alinéa-->
+            <!--quand un retour à la ligne possède l'attribut @rend dont la valeur est indent, un alinéa est créé. -->
             <xsl:when test="@rend='indent'">
                 <br/>
                 <span style="display: inline-block; width: 2em;"></span>
             </xsl:when>
-            <!--retour à la ligne simple-->
+            <!--sinon, un retour à la ligne simple est effectué-->
             <xsl:otherwise>
                 <br/>
             </xsl:otherwise>
@@ -561,28 +561,43 @@
         </a>
     </xsl:template>
     
-    <!--ajout de l'astérisque qui renvoie à la note de bas de page, dans une couleur différente, intégrée au corps du texte-->
+    <!--Mise en forme des titres d'oeuvre dans une couleur différente du corps du texte et en italique, avec un lien cliquable vers l'index-->
+    <xsl:template match="bibl">
+        <a href="index.html"><em style="color: #4B0082;">
+                <xsl:apply-templates/>
+        </em>
+        </a>
+    </xsl:template>
+    
+    <!--Mise en forme des noms d'organisations dans uen couleur différente avec un lien cliquable vers l'index-->
+    <xsl:template match="orgName">
+        <a href="index.html" style="color: #006400; text-decoration: none;">
+            <xsl:apply-templates/>
+        </a>
+    </xsl:template>
+    
+    <!--mise en forme des ajouts manuscrits dans une couleur différente du corps du texte-->
     <xsl:template match="add">
-        <span style="color: #8B0000; font-style: italic;" title="Ajout manuscrit">
+        <span style="color: #8B0000; font-style: italic;">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
     
-    <!--on conserve ici le soulignement du texte tel que dans le xml, pour la note de bas de page-->
+    <!--on match ici la balise hi dont l'attribut @rend est de valeur underlined, afin de conserver le soulignement du texte tel que dans la lettre originale-->
     <xsl:template match="hi[@rend='underlined']">
         <span style="text-decoration: underline;">
             <xsl:apply-templates/>
         </span>
     </xsl:template>
     
-    <!--template de mise en forme pour la fermeture de la lettre, en bas à gauche du body-->
+    <!--template de mise en forme pour la balise de fermeture de la lettre, pour le placer en bas à gauche du body-->
     <xsl:template match="closer">
         <div style="margin-top: 1em;">
             <xsl:apply-templates/>
         </div>
     </xsl:template>
     
-    <!--template pour la signature de la lettre qui est illisible-->
+    <!--template pour la signature de la lettre, seulement présente dans la lettre 1 et illisible. On la remplace par le texte [signature]-->
     <xsl:template match="signed">
         <p style="font-style: italic;">[signature]</p>
     </xsl:template>
@@ -594,26 +609,25 @@
         </div>
     </xsl:template>
     
-    <!-- page pour la deuxième lettre -->
-    <xsl:template name="Lettre2"> <!-- template contenant la deuxième lettre du corpus -->
+    <!-- template qui renvoie la page html de la 2e lettre du corpus -->
+    <xsl:template name="Lettre2"> 
         <xsl:result-document href="out/lettre2.html" method="html" indent="yes">
             <html>
-                <xsl:copy-of select="$head"/>
+                <xsl:copy-of select="$head"/><!-- copie du head commun à toutes les pages -->
                 <body style="margin: 2em 20em 5em 20em; font-family: 'Roboto', serif;">
                     <!--ajout d'un conteneur pour créer des marges autour des éléments de la page-->
                     <div class="container py-4">
-                    <xsl:copy-of select="$header"/>
-                    <h1 style="text-align: center;">Deuxième lettre du corpus : <xsl:value-of select="$lettre2//titleStmt/title"/></h1>
+                    <xsl:copy-of select="$header"/><!-- copie du header commun à toutes les pages -->
+                    <h1 style="text-align: center;"><xsl:value-of select="$lettre2//titleStmt/title"/></h1> <!--on récupère la valeur de la balsie title pour afficher le titre de la lettre-->
                     <div style="margin: 2em 0 2em 0;">
                         <h2>Métadonnées</h2>
                         <div class="row g-3 mt-2">
                             <!--création de trois colonnes de métadonnées réparties sur la largeur de la page-->
                             <div class="col-md-4">
                                 <div class="metadonnees">
-                                    <h3><strong>Identification</strong></h3>
+                                    <h3><strong>Identification</strong></h3><!-- métadonnées générales d'identfication -->
                                     <ul>
-                                    <!--utilisation de xsl:value-of afin de sélectionner les métadonnées pertinentes à integrer dans notre page html-->
-                                    <!-- métadonnées générales -->
+                                    <!-- On récupère la valeur des balises pertinentes comme méatdonnées d'identification-->
                                         <li><strong>Titre : </strong>
                                             <xsl:value-of select="$lettre2//titleStmt/title"/>
                                         </li>
@@ -632,11 +646,12 @@
                                     </ul>
                                 </div>
                             </div>
-                        <!-- conservation -->
+                        <!-- métadonnées de conservation -->
                              <div class="col-md-4">
                                   <div class="metadonnees">
                                        <h3><strong>Conservation</strong></h3>
                                         <ul>
+                                            <!-- on récupère la valeur des balises pertinentes comme métadonnées de conservation -->
                                             <li><strong>Conservée à : </strong> 
                                                 <xsl:value-of select="$lettre2//msIdentifier/repository"/>
                                             </li>
@@ -654,6 +669,7 @@
                                      <div class="metadonnees">
                                             <h3><strong>Description</strong></h3>
                                             <ul>
+                                                <!-- on récupère la valeur des balises pertinentes comme métadonnées de description -->
                                                 <li><strong>Support : </strong>
                                                     <xsl:value-of select="$lettre2//supportDesc/@material"/>
                                                 </li>
@@ -707,48 +723,33 @@
                          </div>
                     </div>
                     </div>
-                    <xsl:copy-of select="$footer"/>
+                    <xsl:copy-of select="$footer"/><!--copie du footer commun à toutes les pages-->
                 </body>
             </html>
         </xsl:result-document>
-    </xsl:template>
+    </xsl:template>    
     
-    <!-- On utilise ici des apply templates pour garder la mise en forme spécifique aux balises enfant du body de la lettre2 -->
     
-    <!--Mise en forme des titres d'oeuvre dans une couleur différente du corps du texte et en italique, avec un lien cliquable vers l'index-->
-    <xsl:template match="bibl">
-        <a href="index.html"><em style="color: #4B0082;">
-            <xsl:apply-templates/>
-        </em>
-        </a>
-    </xsl:template>
-    
-    <!--Mise en forme des noms d'organisations dans uen couleur différente avec un lien cliquable vers l'index-->
-    <xsl:template match="orgName">
-        <a href="index.html" style="color: #006400; text-decoration: none;">
-            <xsl:apply-templates/>
-        </a>
-    </xsl:template>
-    
-    <!-- template contenant la troisième lettre du corpus -->
+    <!-- template qui renvoie la page html contenant la troisième lettre du corpus -->
     <xsl:template name="Lettre3"> 
         <xsl:result-document href="out/lettre3.html" method="html" indent="yes">
             <html>
-                <xsl:copy-of select="$head"/>
+                <xsl:copy-of select="$head"/><!-- copie du head commun à toutes les pages -->
                 <body style="margin: 2em 20em 5em 20em; font-family: 'Roboto', serif;">
                     <!--ajout d'un conteneur pour créer des marges autour des éléments de la page-->
                     <div class="container py-4">
-                    <xsl:copy-of select="$header"/>
-                    <h1 style="text-align: center;">Troisième lettre du corpus : <xsl:value-of select="$lettre3//titleStmt/title"/></h1>
+                    <xsl:copy-of select="$header"/><!-- copie du header commun à toutes les pages -->
+                    <h1 style="text-align: center;"><xsl:value-of select="$lettre3//titleStmt/title"/></h1><!-- on récupère la valeur de la balise title pour afficher le titre de la lettre -->
                     <div style="margin: 2em 0 2em 0;">
                         <h2>Métadonnées</h2>
                         <div class="row g-3 mt-2">
                             <!--création de trois colonnes de métadonnées réparties sur la largeur de la page-->
                             <div class="col-md-4">
                                 <div class="metadonnees">
+                                  <!-- métadonnées générales d'identification-->
                                     <h3><strong>Identification</strong></h3>
                                     <ul>
-                                     <!-- métadonnées générales -->
+                                        <!-- on récupère la valeur des balises pertinentes comme métadonnées d'identification -->
                                          <li><strong>Titre : </strong>
                                              <xsl:value-of select="$lettre3//titleStmt/title"/>
                                          </li>
@@ -764,11 +765,12 @@
                                      </ul>
                                 </div>
                             </div>
-                        <!-- conservation -->
+                        <!-- métadonnées de conservation -->
                             <div class="col-md-4">
                                 <div class="metadonnees">
                                     <h3><strong>Conservation</strong></h3>
                                     <ul>
+                                        <!-- on récupère la valeur des balises pertinentes comme métadonnées de conservation -->
                                         <li><strong>Conservée à : </strong>
                                             <xsl:value-of select="$lettre3//msIdentifier/repository"/>
                                         </li>
@@ -783,6 +785,7 @@
                                 <div class="metadonnees">
                                     <h3><strong>Description</strong></h3>
                                     <ul>
+                                        <!-- on récupère la valeur des balises pertinentes comme métadonnées de description -->
                                         <li><strong>Support : </strong>
                                             <xsl:value-of select="$lettre3//supportDesc/extent"/>
                                         </li>
@@ -815,7 +818,7 @@
                     <div class="row mt-4 align-items-start"> <!-- utilisation de bootstrap pour diviser la page en deux et mettre la transcription et l'image de la lettre côte à côteô-->
                         <div class="col-md-6" style="padding-left: 3rem;">
                         <h2>Corps de la lettre</h2>
-                        <!-- appel des templates déjà défini pour les balises enfant des bodys des lettres 1 et 2-->
+                        <!-- appel des templates déjà définis pour les balises enfants du body de chaque lettre-->
                         <div>
                             <xsl:apply-templates select="$lettre3//body"/>
                         </div>
@@ -831,9 +834,8 @@
                        </div>
                     </div>
                     </div>
+                    <xsl:copy-of select="$footer"/><!-- copie du footer commun à toute les pages -->
                 </body>
-                <xsl:copy-of select="$footer"/>
-                
                 
             </html>
         </xsl:result-document>
