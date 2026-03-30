@@ -38,17 +38,18 @@
         <header>
         <div class= "px-4 py-4 text-center banniere">
                 <h1 class="mb-2">
-                    Correspondances de <xsl:value-of select="$lettre1//titleStmt/author"/> <!-- on récupère le nom de François Truffaut via la valeur du titre de la lettre 1 -->
+                    Correspondances de <xsl:value-of select="$lettre1//titleStmt/author"/> <!-- on récupère le nom de François Truffaut via la valeur de la balise author contenue dans titre de la lettre 1 -->
                 </h1>
+            <!-- ajout et mise en forme de la barre de navigation -->
         </div>
                 <nav class="navbar py-2">
                     <div class="container-fluid justify-content-center">
                         <ul class="navbar-nav flex-row list-unstyled gap-3 justify-content-center mb-0">
-                            <li><a class="nav-link" href="home.html"><button class="btn btn-sm btn-outline-secondary" type="button">Accueil</button></a></li>
-                            <li><a class="nav-link" href="lettre1.html"><button class="btn btn-sm btn-outline-secondary" type="button">1.Jean Gruault</button></a></li>
-                            <li><a class="nav-link" href="lettre2.html"><button class="btn btn-sm btn-outline-secondary" type="button">2.Georges Delerue</button></a></li>
-                            <li><a class="nav-link" href="lettre3.html"><button class="btn btn-sm btn-outline-secondary" type="button">3.Alfred Hitchcock</button></a></li>
-                            <li><a class="nav-link" href="index.html"><button class="btn btn-sm btn-outline-secondary" type="button">Index</button></a></li>
+                            <li><a class="bouton-nav" href="home.html">Accueil</a></li>
+                            <li><a class="bouton-nav" href="lettre1.html">1.Jean Gruault</a></li>
+                            <li><a class="bouton-nav" href="lettre2.html">2.Georges Delerue</a></li>
+                            <li><a class="bouton-nav" href="lettre3.html">3.Alfred Hitchcock</a></li>
+                            <li><a class="bouton-nav" href="index.html">Index</a></li>
                         </ul>
                     </div>
                  </nav>
@@ -67,7 +68,7 @@
     <!--création d'un template qui crée la page d'accueil du site-->
     <xsl:template name="home">
         <xsl:result-document href="out/home.html" method="html" indent="yes"> <!-- définition du format de sortie comme une page html -->
-            <html>
+            <html lang="fr">
                 <xsl:copy-of select="$head"/> <!-- copie du head html commun à toutes les pages définit via la variable head-->
                 <body>
                     <div class="container py-4">
@@ -75,7 +76,7 @@
                         <xsl:copy-of select="$header"/> <!-- copie de l'entête dfinie via la variable header-->
                     <h1 style="text-align: center;">Accueil</h1>
                     
-                    <div class="text-center my-4">é
+                    <div class="text-center my-4">
                         
                         <p class="fst-italic text-muted">Ce site propose une transcription d'archives issues des correspondances de 
                             <xsl:value-of select="$lettre1//titleStmt/author/persName"/><!-- récupération de la valeur de la balise persName pour afficher le nom de FRançois Truffaut -->
@@ -100,10 +101,10 @@
                                             <!-- récupération de la valeur de la balise date et de son attribut @when pour afficher la date d'écriture de la lettre -->
                                             <xsl:value-of select="$lettre1//correspAction/date/@when"/>
                                         </p>
-                                        <h5 class="card-title">
+                                        <h2 class="card-title">
                                             <!-- récupération de la valeur de la balise title pour afficher le titre de la lettre -->
                                             <xsl:value-of select="$lettre1//titleStmt/title"/>
-                                        </h5>
+                                        </h2>
                                     </div>
                                     
                                 </div>
@@ -126,10 +127,10 @@
                                             <!-- récupération de la valeur de la balise date et de son attribut @when pour afficher la date d'écriture de la lettre -->
                                             <xsl:value-of select="$lettre2//correspAction/date/@when"/>
                                         </p>
-                                        <h5 class="card-title">
+                                        <h2 class="card-title">
                                             <!-- récupération de la valeur de la balise title pour afficher le titre de la lettre -->
                                             <xsl:value-of select="$lettre2//titleStmt/title"/>
-                                        </h5>
+                                        </h2>
                                     </div>
                                 </div>
                             </a>
@@ -151,15 +152,14 @@
                                             <!-- récupération de la valeur de la balise date et de son attribut @when pour afficher la date d'écriture de la lettre -->
                                             <xsl:value-of select="$lettre3//correspAction/date/@when"/>
                                         </p>
-                                        <h5 class="card-title">
+                                        <h2 class="card-title">
                                             <!-- récupération de la valeur de la balise title pour afficher le titre de la lettre -->
                                             <xsl:value-of select="$lettre3//titleStmt/title"/>
-                                        </h5>
+                                        </h2>
                                     </div>
                                 </div>
                             </a>
                         </div>
-                        
                     </div>
                     </div>
                     <xsl:copy-of select="$footer"/> <!-- copie du footer via sa variable répété pour chaque page du site -->
@@ -171,7 +171,7 @@
     <!-- template créant la page de l'index du site -->
     <xsl:template name="index"> 
         <xsl:result-document href="out/index.html" method="html" indent="yes"><!-- définition du format de sortie comme une page html -->
-            <html>
+            <html lang="fr">
                 <xsl:copy-of select="$head"/><!-- copie du head html commun à toutes les pages du site -->
                 <body class="p-3">
                     <!--ajout d'un conteneur pour créer des marges autour des éléments de la page-->
@@ -183,7 +183,7 @@
                     </div>
                     <div style="margin: 2em 0 2em 0;">
                         <h2>Personnes</h2>
-                        <!-- utilisation de count() pour afficher le nombre de personnes mentionnées dans le corpus via la balise listPerson de chaque lettreà -->
+                        <!-- utilisation de count() pour compter et afficher la valeur du nombre de personnes mentionnées dans le corpus via la balise listPerson de chaque lettreà -->
                         <p>
                             <xsl:value-of select="count($lettre1//sourceDesc/listPerson[not(@type='fictional')]/person) + 
                                 count($lettre2//sourceDesc/listPerson[not(@type='fictional')]/person) + 
@@ -262,7 +262,7 @@
                             lieu mentionné dans le corpus.
                         </p>
                         <ul>
-                            <!--utilisation de xsl for each group afin de récupérer la liste des noms de lieux mentionnées dans chaque lettre via la balise person.-->
+                            <!--utilisation de xsl for each group afin de récupérer la liste des noms de lieux mentionnées dans chaque lettre via la balise place.-->
                             <!-- on groupe ici les lieux issus de la balise place par leur nom via la balise placeName pour éviter que les mêmes lieux apparaissent plusieurs fois -->
                             <xsl:for-each-group select="$lettre1//listPlace/place | $lettre2//listPlace/place" group-by="placeName">
                                 <li>
@@ -322,12 +322,11 @@
                                             </xsl:when>
                                         </xsl:choose>
                                     </xsl:for-each>
-                                </li>
-                                
-                                <!-- ajout d'une condition pour récupérer la valeur de la balise note contenant la note descriptive associée à chaque organisation de l'index. Si la note existe, sa valeur est affichée -->
+                                    <!-- ajout d'une condition pour récupérer la valeur de la balise note contenant la note descriptive associée à chaque organisation de l'index. Si la note existe, sa valeur est affichée -->
                                 <xsl:if test="note">
                                     <xsl:value-of select="note"/>
                                 </xsl:if>
+                                </li> 
                             </xsl:for-each-group>
                         </ul>
                     </div>
@@ -371,7 +370,7 @@
     
     <xsl:template name="Lettre1"> <!-- template qui renvoie la page html sur la première lettre du corpus -->
         <xsl:result-document href="out/lettre1.html" method="html" indent="yes">
-            <html>
+            <html lang="fr">
                 <xsl:copy-of select="$head"/><!-- copie du head commun à toutes les pages du site -->
                 <body style="margin: 2em 20em 5em 20em; font-family: 'Roboto', serif;">
                     <!--ajout d'un conteneur pour créer des marges autour des éléments de la page-->
@@ -469,15 +468,14 @@
                         <h2>Corps de la lettre</h2>
                         <!-- Utilisation de xsl:apply templates pour traiter les templates des balises enfant du corps du texte de la lettre et ainsi garder une mise en forme conforme pour chaque élément. 
                             Les templates pour chaque élément du corps de la lettre se situent plus bas-->
-                        <p><xsl:apply-templates select="$lettre1//body"/></p>
-                    </div>
+                            <xsl:apply-templates select="$lettre1//body"/>
+                        </div>
                     <!--Ajout du pdf de numérisation de la lettre 1-->
                         <div class="col-md-6">
                     <h2>Tapuscrit</h2>
                     <embed src="letter_1.pdf" 
                         type="application/pdf" 
-                        width="100%" 
-                        height="800px"/>
+                        style="width: 100%; height: 800px;"/>
                 </div>
                     </div>
                     </div>
@@ -502,7 +500,7 @@
         </p>
     </xsl:template>
     
-    <!-- création d'une condition pour la balise "fw", qui correspond à un élément situé avant la balise "opener" et dont l'aspect diffère pour les lettres 2 et 3 -->
+    <!-- création d'une condition pour la balise "fw", qui correspond à une entête située^t avant la balise "opener" et dont l'aspect diffère pour les lettres 2 et 3 -->
     <xsl:template match="fw">
         <xsl:choose>
             <!--si la balise fw est contenue dans la lettre 3, le texte est mis en italique, en majuscules et centré-->
@@ -612,7 +610,7 @@
     <!-- template qui renvoie la page html de la 2e lettre du corpus -->
     <xsl:template name="Lettre2"> 
         <xsl:result-document href="out/lettre2.html" method="html" indent="yes">
-            <html>
+            <html lang="fr">
                 <xsl:copy-of select="$head"/><!-- copie du head commun à toutes les pages -->
                 <body style="margin: 2em 20em 5em 20em; font-family: 'Roboto', serif;">
                     <!--ajout d'un conteneur pour créer des marges autour des éléments de la page-->
@@ -733,7 +731,7 @@
     <!-- template qui renvoie la page html contenant la troisième lettre du corpus -->
     <xsl:template name="Lettre3"> 
         <xsl:result-document href="out/lettre3.html" method="html" indent="yes">
-            <html>
+            <html lang="fr">
                 <xsl:copy-of select="$head"/><!-- copie du head commun à toutes les pages -->
                 <body style="margin: 2em 20em 5em 20em; font-family: 'Roboto', serif;">
                     <!--ajout d'un conteneur pour créer des marges autour des éléments de la page-->
@@ -787,6 +785,9 @@
                                     <ul>
                                         <!-- on récupère la valeur des balises pertinentes comme métadonnées de description -->
                                         <li><strong>Support : </strong>
+                                            <xsl:value-of select="$lettre2//supportDesc/@material"/>
+                                        </li>
+                                        <li><strong>Étendue : </strong>
                                             <xsl:value-of select="$lettre3//supportDesc/extent"/>
                                         </li>
                                         <li><strong>Mise en page : </strong>
@@ -829,8 +830,7 @@
                            <h2>Tapuscrit</h2>
                            <embed src="lettre_3.pdf" 
                                type="application/pdf" 
-                               width="100%" 
-                               height="800px"/>
+                               style="width: 100%; height: 800px;"/>
                        </div>
                     </div>
                     </div>
