@@ -1,4 +1,4 @@
-# Correspondances de François Truffaut - Transformation XML vers HTML avec XSLT
+# Correspondances de François Truffaut - Transformation XML vers HTML via XSLT
 
 ## Description du projet 
 L'objectif du projet est de créer un site web à partir de trois lettres issues des correspondances archivées de François Truffaut. Les trois lettres ont été encodées en fichiers XML-TEI dans le cadre du cours "Modelling humanites data with TEI-XML" donné à l'École nationale des Chartes en 2025. La transformation de ces fichiers en html via XSLT est réalisée das le cadre du cours "Technique et chaine de publication électronique" de l'ENC. L'actuel projet consiste donc en une transformation de ces trois fichiers XML en différents fichiers de sorties HTML via un fichier XSLT, afin de produire un site web.
